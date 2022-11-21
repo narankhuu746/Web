@@ -1,0 +1,344 @@
+{
+  "#comment": "",
+  "html": {
+    "@lang": "en",
+    "head": {
+      "meta": [
+        {
+          "@charset": "UTF-8"
+        },
+        {
+          "@http-equiv": "X-UA-Compatible",
+          "@content": "IE=edge"
+        },
+        {
+          "@name": "viewport",
+          "@content": "width=device-width, initial-scale=1.0"
+        },
+        {
+          "@name": "description",
+          "@content": "tour mongolia, mongoloian tour, top tour"
+        }
+      ],
+      "title": "TOUR MONGOLIA"
+    },
+    "body": {
+      "header": {
+        "div": [
+          {
+            "img": {
+              "@src": "/PICTURES/logo.webp",
+              "@alt": "logo"
+            },
+            "h1": "Tour Mongolia"
+          },
+          {
+            "img": [
+              {
+                "@src": "/PICTURES/insta.webp",
+                "@alt": "instagram",
+                "@style": "height:50px ; width: 50px;"
+              },
+              {
+                "@src": "/PICTURES/fb.webp",
+                "@alt": "facebook",
+                "@style": "height:50px ; width: 50px;"
+              },
+              {
+                "@src": "/PICTURES/yt.webp",
+                "@alt": "youtube",
+                "@style": "height:50px ; width: 50px;"
+              }
+            ]
+          }
+        ],
+        "nav": {
+          "ul": {
+            "li": [
+              {
+                "a": {
+                  "@href": "/index.html",
+                  "#text": "Home"
+                }
+              },
+              {
+                "a": {
+                  "@href": "#",
+                  "#text": "Tour"
+                },
+                "ul": {
+                  "li": [
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "DAILY & SHORT"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "DISCOVERY"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "ADVENTURE"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "GROUP"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "/HTML/tour.html",
+                        "#text": "FAMILY FUN"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "SPECIAL"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "a": {
+                  "@href": "/HTML/mongolia.html",
+                  "#text": "Mongolia"
+                }
+              },
+              {
+                "a": {
+                  "@href": "#",
+                  "#text": "Experiences"
+                },
+                "ul": {
+                  "li": [
+                    {
+                      "a": {
+                        "@href": "/HTML/experiences.html",
+                        "#text": "Activities"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "Art"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "Attractions"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "Meet Mongolians"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "Stay at Luxury Camps"
+                      }
+                    },
+                    {
+                      "a": {
+                        "@href": "#",
+                        "#text": "Steppe Eco camp"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "a": {
+                  "@href": "/PICTURES/aboutus.html",
+                  "#text": "About us"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "div": [
+        {
+          "img": {
+            "@src": "/PICTURES/deedii.webp",
+            "@alt": "mongolia"
+          },
+          "h2": "MONGOLIA"
+        },
+        {
+          "img": {
+            "@src": "/PICTURES/globus.webp",
+            "@alt": "mongolia globus"
+          },
+          "p": [
+            {
+              "b": "Capital",
+              "#text": "Ulaanbaatar"
+            },
+            {
+              "b": "Government",
+              "#text": "Parliamentary Democracy"
+            },
+            {
+              "b": "Currency",
+              "#text": "Togrog/Tugrik (MNT)"
+            },
+            {
+              "b": "Population",
+              "#text": "3,300,000"
+            },
+            {
+              "b": "Language",
+              "#text": "Khalkha Mongol 90%"
+            }
+          ],
+          "b": "Area",
+          "ul": {
+            "li": [
+              "total: 1,565,000km²",
+              "water: 9,600km²",
+              "land: 1,555,400km²"
+            ]
+          }
+        }
+      ],
+      "section": [
+        {
+          "h2": "REGION",
+          "article": [
+            {
+              "h3": "WESTERN MONGOLIA",
+              "img": {
+                "@src": "/PICTURES/Western-Mongolia-map.webp",
+                "@alt": "western mongolia"
+              },
+              "a": {
+                "@href": "/HTML/westernmongolia.html",
+                "#text": "here"
+              }
+            },
+            {
+              "h3": "NORTHERN MONGOLIA",
+              "img": {
+                "@src": "/PICTURES/northern-mongolia.webp",
+                "@alt": "northern mongolia"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            },
+            {
+              "h3": "CENTRAL MONGOLIA",
+              "img": {
+                "@src": "/PICTURES/Central-Mongolia.webp",
+                "@alt": "central mongolia"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            },
+            {
+              "h3": "SOUTHERN MONGOLIA",
+              "img": {
+                "@src": "/PICTURES/Southern-Mongolia.webp",
+                "@alt": "southern mongolia"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            },
+            {
+              "h3": "EASTERN MONGOLIA",
+              "img": {
+                "@src": "/PICTURES/Eastern-Mongolia.webp",
+                "@alt": "eastern mongolia"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            },
+            {
+              "h3": "ULAANBAATAR SURROUNDINGS",
+              "img": {
+                "@src": "/PICTURES/near-ulaanbaatar.webp",
+                "@alt": "ulaanbaatar surroundings"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            }
+          ]
+        },
+        {
+          "h2": "SEASON",
+          "article": [
+            {
+              "h3": "autumn",
+              "img": {
+                "@src": "/PICTURES/autumn.webp",
+                "@alt": "autumn"
+              },
+              "a": {
+                "@href": "/HTML/summer.html",
+                "#text": "here"
+              }
+            },
+            {
+              "h3": "winter",
+              "img": {
+                "@src": "/PICTURES/winter.webp",
+                "@alt": "winter"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            },
+            {
+              "h3": "spring",
+              "img": {
+                "@src": "/PICTURES/spring.webp",
+                "@alt": "spring"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            },
+            {
+              "h3": "summer",
+              "img": {
+                "@src": "/PICTURES/summerzurag.webp",
+                "@alt": "summer"
+              },
+              "a": {
+                "@href": "#",
+                "#text": "more"
+              }
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "p": "2001 - 2022 Active & Adventure Tours Mongolia LLC © Branded as Tour Mongolia"
+      }
+    }
+  }
+}
