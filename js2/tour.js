@@ -1,4 +1,4 @@
-
+console.log("start");
 class Tour {
     constructor(ob){
         this.tour_name = ob.tour_name;
@@ -45,7 +45,10 @@ class TopTour {
 
             })
         })
-        .catch(error => console.log(error))  
+        .catch(error => {
+            console.log(error)
+        console.log("error catch")}
+            )  
 
     }
 
