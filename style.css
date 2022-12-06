@@ -1,0 +1,526 @@
+:root {
+    --title-red-color: #902A0A;
+    --footer-bg-color: #383232;
+    --main-bg-color: #f0f0f0;
+    --title-red-color05: #90290a34;
+    --bt-green: #376A37;
+}
+.border-r-20{
+    border-radius: 20px;
+}
+.red{
+    color: var(--title-red-color);
+}
+.red05{
+    color: var(--title-red-color05);
+}
+.mar-b-05 {
+    margin-bottom: 0.5rem;
+}
+.mar-b-1 {
+    margin-bottom: 1rem;
+}
+.mar-t-5 {
+    margin-top: 5rem;
+}
+.mar-t-2 {
+    margin-top: 2rem;
+}
+.mar-b-5 {
+    margin-bottom: 5rem;
+}
+.half-br{
+    border-radius: 3% 3% 0 0;
+}
+.full-br{
+    border-radius: 3% 3% 3% 3%;
+}
+.wi-10r{
+    min-width: 10rem;
+}
+.wi-15r{
+    min-width: 13rem;
+}
+.font-bold{
+    font-weight: bold;
+}
+.t-center{
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 100;
+
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.5rem;
+}
+
+/* header хэсэг */
+header {
+    display: grid;
+    justify-content: space-between;
+    padding: 0 7rem;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.729);
+    backdrop-filter: blur(5px);
+    box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    height: 12vh;
+    display: grid;
+    grid-template-areas: 
+    "logo nav nav"
+    ;
+}
+/* mobile header */
+header .header-right{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .header-right nav>ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .header-right nav>ul>li{
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+header .header-right nav>ul>li a{
+    color: black; 
+    display: inline-block;
+    position: relative;
+}
+header .header-right nav>ul>li a:hover{
+    color: var(--title-red-color);
+}
+header .header-right nav>ul>li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--title-red-color);
+    transition: transform 0.25s ease-in;
+}
+header .header-right nav>ul>li>a:hover::after{
+    text-decoration: underline;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* navbar dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.dropdown:hover .dropdown-content li {
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-bottom: solid 1px var(--title-red-color05);
+}
+.dropdown .dropdown-content li:hover{
+    border-bottom: solid 1px var(--title-red-color);
+}
+  
+
+  
+
+.logo {
+    grid-area: logo;
+    display: flex;
+}
+.logo h1 {
+    margin-left: 1rem;
+    letter-spacing: 0.4rem;
+}
+#social {
+    display: flex;
+    justify-content: end;
+}
+#social img {
+    margin: 0.2rem 0.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.logo img{
+    width: 5rem;
+    height: 5.6rem;
+}
+#main-title{
+    font-size: 1.6rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    color: var(--title-red-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* home хэсгийн css (((((((((((((((((((((((((((((((*/
+/* home img хэсэг */
+#home{
+    background: url("/PICTURES/home.webp") center center/cover no-repeat;
+    height: 90vh;
+    /* z-index: -1; */
+}
+#home .home-img{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 90vh;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#home .home-img div {
+    border: solid 0.1px white;
+    padding: 5rem;
+    word-spacing: 0.3rem;
+    width: 60vw;
+}
+#home .home-img div h2{
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    /* mobile font */
+}
+#home .home-img div p{
+    font-size: 1.2rem;
+}
+
+/* section tours хэсэг framework((((( */
+.top-tour h2 {
+    font-size: 1.8rem;
+    color: var(--title-red-color);
+    margin: 3rem;
+}
+.top-tour {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+}
+.section .articles{
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
+}
+.section .articles article {
+    margin: 1rem;
+    border-radius: 3% 3% 3% 3%;
+    border-left: solid 1px rgba(0, 0, 0, 0.071);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.071);
+    border-right: solid 1px rgba(0, 0, 0, 0.071);
+}
+.section .articles article img{
+    width: 20rem;
+    border-radius: 3% 3% 0 0;
+}
+.section .articles article a{
+    color: black;
+}
+.section .articles article a ul li i {
+    margin-right: 0.5rem;
+    color: rgb(0, 255, 0);
+}
+.section .articles article:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
+}
+
+/* section tours хэсэг framework)))) */
+
+/* footer хэсэг */
+footer{
+    margin-top: 5rem;
+    text-align: center;
+    background-color: var(--footer-bg-color);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+}
+/* home хэсгийн css )))))))))))))))))))))))))))))))))))*/
+
+
+
+
+/* experience хуудсийн css(((((((((((((((((((((((((( */
+
+
+
+/* page болгоны гарчиг ашигладаг хэмжээ */
+.page-title-height{
+    height: 40vh;
+}
+
+.act {
+    background: url("/exp_pic/act.webp") center center/cover no-repeat;
+}
+.page-title-height .page-title-name{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 40vh;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page-title-height .page-title-name h2{
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+}
+.title-desc{
+    margin: 2rem 4rem;
+    word-spacing: 0.2rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.experiences{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* mobile repeat багасгана */
+}
+.experiences .exp-overlay img{
+    width: 25rem;
+    display: block;
+    height: auto;
+}
+.experiences .exp-overlay{
+    width: 25rem;
+    margin: 0 2rem 5rem 2rem;
+    position: relative; 
+}
+/* mobule exp repeat бага болгоно */
+.experiences .exp-overlay .overlay{
+    position: absolute;
+    /* зураг дээр байршуулах */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    /* hover хийсний дараагаар Height 100% болгож өгөх */
+    height: 30%;
+    transition-property: all;
+    transition: 0.5s ease;
+}
+.exp-overlay:hover .overlay {
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* experience хуудсийн css))))))))))))))))))))))))))))) */
+/* tour->fun tour хуудсийн css(((((((((((((((((((((((((((((( */
+.fun-tours{
+    background: url("/PICTURES/fun.webp") center center/cover no-repeat;
+}
+/* tour->fun tour хуудсийн css)))))))))))))))))))) */
+
+
+
+/* tour info tour хуудсийн css(((((((((((((((((((((((( */
+.scene-n-p{
+    background: url("/PICTURES/tour1.webp") center center/cover no-repeat;
+}
+.overview {
+    display: flex;
+    padding: 0.5rem 0;
+    background: var(--main-bg-color);
+    position: sticky;
+    top: 12vh;
+}
+
+.overview ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.overview ul li{
+    margin-left: 1.5rem;
+}
+.overview ul li a{
+    color: rgba(0, 0, 0, 0.75);
+    letter-spacing: 0.1rem;
+}
+.overview ul li a:hover{
+    color: var(--title-red-color);
+    font-weight: 900;
+}
+.uscale{
+    transform: scale(1.8, 1.5);
+    color: var(--title-red-color);
+}
+/* mobile fonts or */
+
+.container {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "info info side"
+    ;
+    gap: 2rem;  
+    
+}
+.container .info {
+    grid-area: info;
+
+}
+.container .info>p{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.container .info .tour-overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.container .info section h3{
+    color: var(--title-red-color);
+    font-weight: bold;
+    border-bottom: 1px solid var(--title-red-color05);
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+}
+.container .info section{
+    margin-bottom: 0rem;
+}
+.container .info section article h4{
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.container .info .tour-overview .item1{
+    margin: 1rem;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    /* mobile repeat */
+}
+.container .info .tour-overview .item1 p{
+    text-align: center;
+}
+#choose{
+    display: flex;
+    gap: 5rem;
+}
+#choose div ul li{
+    display: flex;
+    background: var(--main-bg-color);
+    width: 4rem;
+    height: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center; 
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    border-radius: 20px;
+    margin-bottom: 0.2rem;
+}
+#choose div ul li:hover{
+    background: var(--bt-green);
+    color: white;
+    scale: 1.2;
+}
+.prices {
+    display: flex;
+    flex-direction: column;
+}
+.prices>div{
+    width: 70%;
+    margin: 2rem auto;
+}
+.price {
+    display: flex;
+    justify-content: space-around;
+    background: var(--main-bg-color);
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+
+/* .current{
+    font-weight: bold;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container .side{
+    grid-area: side;
+
+}
+
