@@ -726,6 +726,12 @@ footer{
         margin-left: 0.5rem;
         font-size: 0.6rem;
     }
+    .experiences .exp-overlay img{
+        width: 22rem;
+    }
+    .experiences .exp-overlay{
+        width: 22rem; 
+    }
 }
 
 
