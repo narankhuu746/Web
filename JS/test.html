@@ -7,9 +7,8 @@
     <meta name="description" content="tour funny, tours, mongolia, national tour, daily tour, adventure tour, mongolia special tour">
     <title>Tour</title>
     <script>
-
         const tours = [
-            tour_title = "FAMILY FUN TOURS",
+            "FAMILY FUN TOURS",
             {
                 tour_name : "Scenes of National Parks",
                 tour_img : "/PICTURES/tour1.webp",
@@ -53,7 +52,8 @@
                     "6 Days 5 Nights",
                     "Enjoy Chinggis Khaan statue",
                     "Visit cultural heritage",
-                    "Spotting wild sheep<",
+                    "Spotting wild sheep",
+                    "Spotting wild sheep",
                     "Explore historical site"
                 ] ,
                 tour_info_link : "/HTML/tour_info.html"
@@ -85,26 +85,24 @@
             
         ];
         class Tour{
-            constructor(tour_name, tour_img, tour_master, tour_info_link){
+            constructor({tour_name, tour_img, tour_master, tour_info_link}){
                 this.tour_name = tour_name;
                 this.tour_img = tour_img;
                 this.tour_master = tour_master;
                 this.tour_info_link = tour_info_link;
-
             }
+            
 
             render(){
+                var s = "";
+                this.tour_master.forEach(element => {
+                    s = s + "<li>"+ element + "</li>";
+                });
                 return `<article>
                             <a href="${this.tour_info_link}">
                                 <img src="${this.tour_img}" alt="tour image">
                                 <h3>${this.tour_name}</h3>
-                                <ul>
-                                    <li>${this.tour_master[0]}</li>
-                                    <li>${this.tour_master[1]}</li>
-                                    <li>${this.tour_master[2]}</li>
-                                    <li>${this.tour_master[3]}</li>
-                                    <li>${this.tour_master[4]}</li>
-                                </ul>
+                                <ul>${s}</ul>
                             </a>
                          </article>`;
             }
@@ -121,18 +119,15 @@
 
             }
         };
-        
         function App(tours, title_Element, tours_Element){
             let ren_title_object = new TourCategory(tours[0]);
-            console.log(ren_title_object);
             let ren_title="";
             ren_title+=ren_title_object.render();
-
 
             let ren_tours = "";
 
             for(let i = 1; i<tours.length; i++){
-                let ren = new Tour(tours[i].tour_name, tours[i].tour_img, tours[i].tour_master, tours[i].tour_info_link);
+                let ren = new Tour(tours[i]);
                 ren_tours +=ren.render();
             }
             document.getElementById(title_Element).insertAdjacentHTML("afterbegin", ren_title);
@@ -181,10 +176,8 @@
             </ul>
         </nav>
     </header>
-    
     <div id = "tour-title"></div>
     <div id = "tours"></div>
-    
     <footer>
         <p>2001 - 2022 Active & Adventure Tours Mongolia LLC © Branded as Tour Mongolia</p>
     </footer>
