@@ -11,6 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 1080px)" href="/CSS/mobile.css">
+        <!-- 1080< -->
+    <!-- 1080> menu -->
+    <!-- 840> menu 1rep-->
+    <!-- 760 -->
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
 </head>
 <body>
     
@@ -28,15 +38,15 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html" id="current">Home</a></li>
                     <li class="dropdown"><a href="#">Tour</a>
                         <ul class="dropdown-content ">
-                            <li class="wi-10r"><a href="#">DAILY & SHORT</a></li>
-                            <li class="wi-10r"><a href="#">DISCOVERY</a></li>
-                            <li class="wi-10r"><a href="#">ADVENTURE</a></li>
-                            <li class="wi-10r"><a href="#">GROUP</a></li>
-                            <li class="wi-10r"><a href="/HTML/tour.html">FAMILY FUN</a></li>
-                            <li class="wi-10r"><a href="#">SPECIAL</a></li>
+                            <li class="wi-10r"><a href="#">Daily & Short</a></li>
+                            <li class="wi-10r"><a href="#">Discovery</a></li>
+                            <li class="wi-10r"><a href="#">Adventure</a></li>
+                            <li class="wi-10r"><a href="#">Group</a></li>
+                            <li class="wi-10r"><a href="/HTML/tour.html">Family Fun</a></li>
+                            <li class="wi-10r"><a href="#">Special</a></li>
                         </ul>
                     </li>
                     <li><a href="/HTML/mongolia.html">Mongolia</a></li>
@@ -53,6 +63,41 @@
                     <li><a href="/HTML/aboutus.html">About</a></li>
                 </ul>
             </nav>
+            <div id="hamburger" onclick="toggleMobileMenu(this)">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div>
+                    <ul id="mobile-menu">
+                        <li><a href="/index.html" id="current">Home</a></li>
+                        <li><a href="#">Tour</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="#">Daily & Short</a></li>
+                                <li class="mar-l-1"><a href="#">Discovery</a></li>
+                                <li class="mar-l-1"><a href="#">Adventure</a></li>
+                                <li class="mar-l-1"><a href="#">Group</a></li>
+                                <li class="mar-l-1"><a href="/HTML/tour.html">Family Fun</a></li>
+                                <li class="mar-l-1"><a href="#">Special</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                        <li><a href="#">Experiences</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="/HTML/experiences.html">Activities</a></li>
+                                <li class="mar-l-1"><a href="#">Art</a></li>
+                                <li class="mar-l-1"><a href="#">Attractions</a></li>
+                                <li class="mar-l-1"><a href="#">Meet Mongolians</a></li>
+                                <li class="mar-l-1"><a href="#">Stay at Luxury Camps</a></li>
+                                <li class="mar-l-1"><a href="#">Steppe Eco camp</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/aboutus.html">About</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </header>
     <div id="home">
@@ -144,11 +189,11 @@
                     <img src="/PICTURES/tour3.webp" alt="tour image">
                     <h3>Snow Leopard Quest</h3>
                     <ul>
-                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>12 Days 11 Nights</li>
-                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Visit ethnic groups</li>
-                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Spotting wild cats</li>
-                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Hiking through high mountains</li>
-                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Experiencing unique nomadic life</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check cgreen"></i>12 Days 11 Nights</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check cgreen"></i>Visit ethnic groups</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check cgreen"></i>Spotting wild cats</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check cgreen"></i>Hiking through high mountains</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check cgreen"></i>Experiencing unique nomadic life</li>
                     </ul>
                 </a>
             </article>
