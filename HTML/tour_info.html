@@ -6,49 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="tour mongolia, mongoloian tour, top tour">
     <title>TOUR MONGOLIA</title>
-
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="https://kit.fontawesome.com/fb1fcdd475.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
 </head>
 <body>
-    <!-- nav хэсэг -->
- <!-- nav хэсэг -->
+    
     <!-- nav хэсэг -->
     <header>
-        <div>
+        <div class="logo">
             <img src="/PICTURES/logo.webp" alt="logo">
-            <h1>Tour Mongolia</h1>
+            <h1 id="main-title">Tour Mongolia</h1>
         </div>
-        <div>
-            <img src="/PICTURES/insta.webp" alt="instagram" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/fb.webp" alt="facebook" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/yt.webp" alt="youtube" style="height:50px ; width: 50px;">
+        <div class="header-right">
+            <div id="social">
+                <img src="/PICTURES/insta.webp" alt="instagram">
+                <img src="/PICTURES/fb.webp" alt="facebook">
+                <img src="/PICTURES/yt.webp" alt="youtube">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown"><a href="#" id="current">Tour</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-10r"><a href="#">Daily & Short</a></li>
+                            <li class="wi-10r"><a href="#">Discovery</a></li>
+                            <li class="wi-10r"><a href="#">Adventure</a></li>
+                            <li class="wi-10r"><a href="#">Group</a></li>
+                            <li class="wi-10r"><a href="/HTML/tour.html">Family Fun</a></li>
+                            <li class="wi-10r"><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                    <li class="dropdown"><a href="#">Experiences</a>
+                        <ul  class="dropdown-content ">
+                            <li class="wi-15r"><a href="/HTML/experiences.html">Activities</a></li>
+                            <li class="wi-15r"><a href="#">Art</a></li>
+                            <li class="wi-15r"><a href="#">Attractions</a></li>
+                            <li class="wi-15r"><a href="#">Meet Mongolians</a></li>
+                            <li class="wi-15r"><a href="#">Stay at Luxury Camps</a></li>
+                            <li class="wi-15r"><a href="#">Steppe Eco camp</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/aboutus.html">About</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" onclick="toggleMobileMenu(this)">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div>
+                    <ul id="mobile-menu">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#" id="current">Tour</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="#">Daily & Short</a></li>
+                                <li class="mar-l-1"><a href="#">Discovery</a></li>
+                                <li class="mar-l-1"><a href="#">Adventure</a></li>
+                                <li class="mar-l-1"><a href="#">Group</a></li>
+                                <li class="mar-l-1"><a href="/HTML/tour.html"  id="current">Family Fun</a></li>
+                                <li class="mar-l-1"><a href="#">Special</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                        <li><a href="#">Experiences</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="/HTML/experiences.html">Activities</a></li>
+                                <li class="mar-l-1"><a href="#">Art</a></li>
+                                <li class="mar-l-1"><a href="#">Attractions</a></li>
+                                <li class="mar-l-1"><a href="#">Meet Mongolians</a></li>
+                                <li class="mar-l-1"><a href="#">Stay at Luxury Camps</a></li>
+                                <li class="mar-l-1"><a href="#">Steppe Eco camp</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/aboutus.html">About</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Tour</a>
-                <ul>
-                    <li><a href="#">DAILY & SHORT</a></li>
-                    <li><a href="#">DISCOVERY</a></li>
-                    <li><a href="#">ADVENTURE</a></li>
-                    <li><a href="#">GROUP</a></li>
-                    <li><a href="/HTML/tour.html">FAMILY FUN</a></li>
-                    <li><a href="#">SPECIAL</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/mongolia.html">Mongolia</a></li>
-                <li><a href="#">Experiences</a>
-                <ul>
-                    <li><a href="/HTML/experiences.html">Activities</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Attractions</a></li>
-                    <li><a href="#">Meet Mongolians</a></li>
-                    <li><a href="#">Stay at Luxury Camps</a></li>
-                    <li><a href="#">Steppe Eco camp</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/aboutus.html">About us</a></li>
-            </ul>
-        </nav>
     </header>
 
     <div class="page-title-height scene-n-p">
@@ -67,7 +112,11 @@
             <li><a href="#4">MAP</a></li>
             <li><a href="#5">INFORMATION</a></li>
         </ul>
-        <i class="fa-solid fa-share uscale"></i>
+        <a href="#">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill scale13 red" viewBox="0 0 16 16">
+                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+              </svg>
+        </a>
     </div>
 
     <div class="container">
@@ -165,26 +214,44 @@
         </div>
         
         <div class="side">
-            <div>
+            <div id="booking">
                 <form action="">
-                  <label for="dateproceed">Select Date:</label>
-                  <input type="date" id="dateproceed">
-                    <input type="number" name="number" placeholder="Number">
-                    <input type="submit" name="submit" value="submit">
+                    <div>
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <input type="date" id="dateproceed">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-user-plus"></i>
+                        <input type="number" name="number" placeholder="Number">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <input type="submit" name="submit" value="PROCEED" id="proceed">
+                    </div>
                 </form>
             </div>
-            <section>
-                <h3>Why book with us?</h3>
-                <h4>Best Price Guarantee</h4>
-                <p>We guarantee the lowest price when you book online. If you find a better price we’ll match it!</p>
-                <h4>Small Group Experience</h4>
-                <p>We focus on small groups and personal experience</p>
-                <h4>Tour planning help</h4>
-                <p>Our customer support team is ready to assist</p>
-                <h4>Trusted local experts in Mongolia</h4>
-                <p>We're Mongolia's largest & most chosen responsible Tour Operato</p>
-                <h4>Full Refund Guarantee</h4>
-                <p>Get a full refund on most tours when you cancel with more than 90 days notice</p>
+            <section >
+                <h3 class="t-center">Why book with us?</h3>
+                <div>
+                    <h4 class="font-bold">Best Price Guarantee</h4>
+                    <p><i class="fa-solid fa-check cgreen  mar-r-05"></i>We guarantee the lowest price when you book online. If you find a better price we’ll match it!</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">Small Group Experience</h4>
+                    <p><i class="fa-solid fa-check cgreen  mar-r-05"></i>We focus on small groups and personal experience</p>
+                </div>
+               <div>
+                    <h4 class="font-bold ">Trusted local experts in Mongolia</h4>
+                    <p><i class="fa-solid fa-check cgreen  mar-r-05"></i>We're Mongolia's largest & most chosen responsible Tour Operato</p>
+                </div>
+                <div>
+                    <h4 class="font-bold ">Trusted local experts in Mongolia</h4>
+                    <p><i class="fa-solid fa-check cgreen  mar-r-05"></i>We're Mongolia's largest & most chosen responsible Tour Operato</p>
+                </div>
+
+
+
+
             </section>
         </div>
     </div>
