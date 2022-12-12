@@ -5,71 +5,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="tour mongolia, mongoloian tour, top tour">
-    <title>TOUR MONGOLIA</title>
+    <meta name="description"
+        content="tour funny, tours, mongolia, national tour, daily tour, adventure tour, mongolia special tour">
+    <title>Tour</title>
+    <link rel="stylesheet" href="/CSS/stylemongolia.css">
+    <script src="https://kit.fontawesome.com/fb1fcdd475.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="/PICTURES/logo.webp" alt="logo">
-            <h1>Tour Mongolia</h1>
-        </div>
-        <div>
-            <img src="/PICTURES/insta.webp" alt="instagram" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/fb.webp" alt="facebook" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/yt.webp" alt="youtube" style="height:50px ; width: 50px;">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Tour</a>
-                <ul>
-                    <li><a href="#">DAILY & SHORT</a></li>
-                    <li><a href="#">DISCOVERY</a></li>
-                    <li><a href="#">ADVENTURE</a></li>
-                    <li><a href="#">GROUP</a></li>
-                    <li><a href="/HTML/tour.html">FAMILY FUN</a></li>
-                    <li><a href="#">SPECIAL</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/mongolia.html">Mongolia</a></li>
-                <li><a href="#">Experiences</a>
-                <ul>
-                    <li><a href="/HTML/experiences.html">Activities</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Attractions</a></li>
-                    <li><a href="#">Meet Mongolians</a></li>
-                    <li><a href="#">Stay at Luxury Camps</a></li>
-                    <li><a href="#">Steppe Eco camp</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/aboutus.html">About us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div>
-        <img src="download.webp" alt="mongolia">
-        <h2>TOP TRIVEL</h2>
+    <!-- nav хэсэг -->
+    <header>
+        <div class="logo">
+            <img src="/PICTURES/logo.webp" alt="logo">
+            <h1 id="main-title">Tour Mongolia</h1>
+        </div>
+        <div class="header-right">
+            <div id="social">
+                <img src="/PICTURES/insta.webp" alt="instagram">
+                <img src="/PICTURES/fb.webp" alt="facebook">
+                <img src="/PICTURES/yt.webp" alt="youtube">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown"><a href="#">Tour</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-10r"><a href="#">Daily & Short</a></li>
+                            <li class="wi-10r"><a href="#">Discovery</a></li>
+                            <li class="wi-10r"><a href="#">Adventure</a></li>
+                            <li class="wi-10r"><a href="#">Group</a></li>
+                            <li class="wi-10r"><a href="/HTML/tour.html" id="current">Family Fun</a></li>
+                            <li class="wi-10r"><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                    <li class="dropdown"><a href="#">Experiences</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-15r"><a href="/HTML/experiences.html">Activities</a></li>
+                            <li class="wi-15r"><a href="#">Art</a></li>
+                            <li class="wi-15r"><a href="#">Attractions</a></li>
+                            <li class="wi-15r"><a href="#">Meet Mongolians</a></li>
+                            <li class="wi-15r"><a href="#">Stay at Luxury Camps</a></li>
+                            <li class="wi-15r"><a href="#">Steppe Eco camp</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/aboutus.html">About</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" onclick="toggleMobileMenu(this)">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div>
+                    <ul id="mobile-menu">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#" id="current">Tour</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="#">Daily & Short</a></li>
+                                <li class="mar-l-1"><a href="#">Discovery</a></li>
+                                <li class="mar-l-1"><a href="#">Adventure</a></li>
+                                <li class="mar-l-1"><a href="#">Group</a></li>
+                                <li class="mar-l-1"><a href="/HTML/tour.html" id="current">Family Fun</a></li>
+                                <li class="mar-l-1"><a href="#">Special</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                        <li><a href="#">Experiences</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="/HTML/experiences.html">Activities</a></li>
+                                <li class="mar-l-1"><a href="#">Art</a></li>
+                                <li class="mar-l-1"><a href="#">Attractions</a></li>
+                                <li class="mar-l-1"><a href="#">Meet Mongolians</a></li>
+                                <li class="mar-l-1"><a href="#">Stay at Luxury Camps</a></li>
+                                <li class="mar-l-1"><a href="#">Steppe Eco camp</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/aboutus.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-title-height top ">
+        <div class="page-title-name">
+            <div>
+                <h2>TOP TRIVEL</h2>
+            </div>
+        </div>
     </div>
 
-    <section>
-        <h3>AMARBAYSGALAN MONASTERY</h3>
-        <img src="download.webp" alt="mongolia">
-        <p>Amarbayasgalant, one of the most well-known and largest monasteries of Mongolia, is located in the beautiful
-            Iven Gol River valley on the foot of Burenkhan Mountain in Baruunburen soum of Selenge province. Visitors
-            especially enjoy the magnificent art and architectural construction.
-        </p>
-        <h3>NORTH MONGOLIA</h3>
-        <img src="download.webp" alt="mongolia">
-        <img src="download.webp" alt="mongolia">
-        <p>Since then the monastery of the Undur Geghen was a great source of Dharma teaching and accomplishment with
-            over six thousand novices and ordained monks who followed the rules of Lord Buddha's Vinaya, combining the
-            Three Basket in full harmony with the Three Higher Trainings. The beauty, decorations and construction of
-            the monastery have made it one of the most magnificent architectural monuments not only in Mongolia, but in
-            whole Asia.
-        </p>
+
+    <section class="grid_top ">
+        <div class="top-item1 mar-t-2">
+            <h3 class="t-center">AMARBAYSGALAN MONASTERY</h3>
+            <div class="line"></div>
+        </div>
+        <img class="top-item2 top2-img mar-t-2" src="/PICTURES/top2.webp" alt="mongolia">
+        <img class="top-item3 top3-img  " src="/PICTURES/top3.webp" alt="mongolia">
+        <div class="t-center4 top-item4">
+
+            <p>Amarbayasgalant, one of the most well-known and largest monasteries of Mongolia, is
+                located in the beautiful Iven Gol River valley on the foot of Burenkhan Mountain in Baruunburen soum of
+                Selenge province.
+                Visitors especially enjoy the magnificent art and architectural construction.
+            </p>
+            <p>
+                Since then the monastery of the Undur Geghen was a great source of Dharma teaching and accomplishment
+                with over six thousand novices and ordained monks who followed the rules of Lord Buddha's Vinaya,
+                combining the Three Basket in full harmony with the Three Higher Trainings. The beauty, decorations and
+                construction of the monastery have made it one of the most magnificent architectural monuments not only
+                in Mongolia,
+                but in whole Asia.
+            </p>
+        </div>
     </section>
 </body>
 
