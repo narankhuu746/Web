@@ -1,111 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="tour mongolia, mongoloian tour, top tour">
-        <title>TOUR MONGOLIA</title>
-    </head>
-    <body>
-        <!-- nav хэсэг -->
-      <header>
-        <div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="tour funny, tours, mongolia, national tour, daily tour, adventure tour, mongolia special tour">
+    <title>Tour</title>
+    <link rel="stylesheet" href="/CSS/stylemongolia.css">
+    <script src="https://kit.fontawesome.com/fb1fcdd475.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- nav хэсэг -->
+    <header>
+        <div class="logo">
             <img src="/PICTURES/logo.webp" alt="logo">
-            <h1>Tour Mongolia</h1>
+            <h1 id="main-title">Tour Mongolia</h1>
         </div>
-        <div>
-            <img src="/PICTURES/insta.webp" alt="instagram" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/fb.webp" alt="facebook" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/yt.webp" alt="youtube" style="height:50px ; width: 50px;">
+        <div class="header-right">
+            <div id="social">
+                <img src="/PICTURES/insta.webp" alt="instagram">
+                <img src="/PICTURES/fb.webp" alt="facebook">
+                <img src="/PICTURES/yt.webp" alt="youtube">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown"><a href="#">Tour</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-10r"><a href="#">Daily & Short</a></li>
+                            <li class="wi-10r"><a href="#">Discovery</a></li>
+                            <li class="wi-10r"><a href="#">Adventure</a></li>
+                            <li class="wi-10r"><a href="#">Group</a></li>
+                            <li class="wi-10r"><a href="/HTML/tour.html" id="current">Family Fun</a></li>
+                            <li class="wi-10r"><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                    <li class="dropdown"><a href="#">Experiences</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-15r"><a href="/HTML/experiences.html">Activities</a></li>
+                            <li class="wi-15r"><a href="#">Art</a></li>
+                            <li class="wi-15r"><a href="#">Attractions</a></li>
+                            <li class="wi-15r"><a href="#">Meet Mongolians</a></li>
+                            <li class="wi-15r"><a href="#">Stay at Luxury Camps</a></li>
+                            <li class="wi-15r"><a href="#">Steppe Eco camp</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/aboutus.html">About</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" onclick="toggleMobileMenu(this)">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div>
+                    <ul id="mobile-menu">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#" id="current">Tour</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="#">Daily & Short</a></li>
+                                <li class="mar-l-1"><a href="#">Discovery</a></li>
+                                <li class="mar-l-1"><a href="#">Adventure</a></li>
+                                <li class="mar-l-1"><a href="#">Group</a></li>
+                                <li class="mar-l-1"><a href="/HTML/tour.html" id="current">Family Fun</a></li>
+                                <li class="mar-l-1"><a href="#">Special</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                        <li><a href="#">Experiences</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="/HTML/experiences.html">Activities</a></li>
+                                <li class="mar-l-1"><a href="#">Art</a></li>
+                                <li class="mar-l-1"><a href="#">Attractions</a></li>
+                                <li class="mar-l-1"><a href="#">Meet Mongolians</a></li>
+                                <li class="mar-l-1"><a href="#">Stay at Luxury Camps</a></li>
+                                <li class="mar-l-1"><a href="#">Steppe Eco camp</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/aboutus.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Tour</a>
-                <ul>
-                    <li><a href="#">DAILY & SHORT</a></li>
-                    <li><a href="#">DISCOVERY</a></li>
-                    <li><a href="#">ADVENTURE</a></li>
-                    <li><a href="#">GROUP</a></li>
-                    <li><a href="/HTML/tour.html">FAMILY FUN</a></li>
-                    <li><a href="#">SPECIAL</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/mongolia.html">Mongolia</a></li>
-                <li><a href="#">Experiences</a>
-                <ul>
-                    <li><a href="/HTML/experiences.html">Activities</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Attractions</a></li>
-                    <li><a href="#">Meet Mongolians</a></li>
-                    <li><a href="#">Stay at Luxury Camps</a></li>
-                    <li><a href="#">Steppe Eco camp</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/aboutus.html">About us</a></li>
-            </ul>
-        </nav>
     </header>
-        <div>
-            <img  src="/PICTURES/deedii.webp" alt="mongolia"> 
-            <h2>MONGOLIA</h2>
+    <!-- deed taliin dorvoljin  zugiig n orruul csss deer  -->
+    <div class="page-title-height mongol">
+        <div class="page-title-name">
+            <div>
+                <h2>MONGOLIA</h2>
+            </div>
         </div>
-
-    <div>
-        <img src="/PICTURES/globus.webp" alt="mongolia globus">  
-        <p><b>Capital</b> Ulaanbaatar</p>
-        <p><b>Government  </b>  Parliamentary Democracy </p>
-        <p><b>Currency</b> Togrog/Tugrik (MNT) </p>
-        <b>Area</b>  <ul><li>total: 1,565,000km²</li>  
-                        <li>water: 9,600km²</li>
-                        <li>land: 1,555,400km²</li></ul>
-
-        <p><b>Population</b> 3,300,000</p>
-        <p><b>Language</b> Khalkha Mongol 90%</p>
     </div>
 
- <section>
-        <h2>REGION</h2>
-        <article>
-            <h3>WESTERN MONGOLIA</h3>
-            <img src="/PICTURES/Western-Mongolia-map.webp" alt="western mongolia"><a href="/HTML/westernmongolia.html">here</a></article>
-        <article>
-            <h3>NORTHERN MONGOLIA</h3>
-            <img src="/PICTURES/Northern-Mongolia.webp" alt="orthern mongolia"><a href="#">more</a></article>
-        <article>
-            <h3>CENTRAL MONGOLIA</h3>
-            <img src="/PICTURES/Central-Mongolia.webp" alt="central mongolia"><a href="#">more</a></article>
-        <article>
-            <h3>SOUTHERN MONGOLIA</h3>
-            <img src="/PICTURES/Southern-Mongolia.webp" alt="southern mongolia"><a href="#">more</a></article>
-        <article>
-            <h3>EASTERN MONGOLIA</h3>
-            <img src="/PICTURES/Eastern-Mongolia.webp" alt="eastern mongolia"><a href="#">more</a></article>
-        <article>
-            <h3>ULAANBAATAR SURROUNDINGS</h3>
-            <img src="/PICTURES/near-ulaanbaatar-_1_.webp" alt="ulaanbaatar surroundings"><a href="#">more</a></article>
+
+    <!-- globus -->
+    <div class="backroundcolor">
+        <div class="grid-globus">
+            <div class="mon-grid-item1 item">
+                <img src="/PICTURES/globus.webp" alt="mongolia globus">
+            </div>
+            <div class="mon-grid-item2 item">
+                <p><b>Capital</b> Ulaanbaatar</p>
+                <p><b>Government </b> Parliamentary Democracy </p>
+                <p><b>Currency</b> Togrog/Tugrik (MNT) </p>
+                <p><b>Area</b></p>
+                <ul>
+                    <li>total: 1,565,000km²</li>
+                    <li>water: 9,600km²</li>
+                    <li>land: 1,555,400km²</li>
+                </ul>
+
+                <p><b>Population</b> 3,300,000</p>
+                <p><b>Language</b> Khalkha Mongol 90%</p>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="  t-center mar-t-2">
+        <h2 class="t-center mar-t-2 mar-b-1 h2-size">REGION</h2>
+
+        <div class="region_grid">
+            <article class="mongolia_article re-grid-item1 ">
+                <h3 class="font-bold mar-t-2">WESTERN MONGOLIA</h3>
+                <img class="west" src="/PICTURES/Western-Mongolia-map.webp" title="map" alt="western mongolia">
+                <a class=" button" href="/HTML/westernmongolia.html">MORE</a>
+            </article>
+
+            <article class="mongolia_article re-grid-item2 ">
+                <h3 class="font-bold mar-t-2">NORTHERN MONGOLIA</h3>
+                <img class="west" src="/PICTURES/Northern-Mongolia.webp" title="map" alt="orthern mongolia">
+                <a class=" button" href="#">MORE</a>
+            </article>
+
+            <article class="mongolia_article re-grid-item3 ">
+                <h3 class="font-bold mar-t-2">CENTRAL MONGOLIA</h3>
+                <img class="west" src="/PICTURES/Central-Mongolia.webp" title="map" alt="central mongolia">
+                <a class=" button" href="#">MORE</a>
+            </article>
+
+            <article class="mongolia_article re-grid-item4 ">
+                <h3 class="font-bold mar-t-2">SOUTHERN MONGOLIA</h3>
+                <img class="west" src="/PICTURES/Southern-Mongolia.webp" title="map" alt="southern mongolia">
+                <a class=" button" href="#">MORE</a>
+            </article>
+
+            <article class="mongolia_article re-grid-item5 ">
+                <h3 class="font-bold mar-t-2">EASTERN MONGOLIA</h3>
+                <img class="west" src="/PICTURES/Eastern-Mongolia.webp" title="map" alt="eastern mongolia">
+                <a class=" button" href="#">MORE</a>
+            </article>
+
+            <article class="mongolia_article re-grid-item6 ">
+                <h3 class="font-bold mar-t-2">ULAANBAATAR SURROUNDINGS</h3>
+                <img class="west" src="/PICTURES/near-ulaanbaatar-_1_.webp" title="map" alt="ulaanbaatar surroundings">
+                <a class=" button" href="#">MORE</a>
+            </article>
+        </div>
     </section>
-        
-    <section>
-        <h2>SEASON</h2>
-        <article>
-            <h3>autumn</h3>
-            <img src="/PICTURES/autumn.webp" alt="autumn"><a href="/HTML/summer.html">here</a>
-        </article>
-        <article>
-            <h3>winter</h3>
-            <img src="/PICTURES/winter.webp" alt="winter"><a href="#">more</a></article>
-        <article>
-            <h3>spring</h3>
-            <img src="/PICTURES/spring.webp" alt="spring"><a href="#">more</a></article>
-        <article>
-            <h3>summer</h3>
-            <img src="/PICTURES/summerzurag.webp" alt="summer"><a href="#">more</a></article>
-   
+
+
+
+    <section class=" mar-t-2  t-center">
+        <h2 class="t-center h2-size mar-b-1 ">SEASON</h2>
+        <div class=" sea-grid">
+
+            <article class="sea-grid-item1 sea">
+                <h3 class="font-bold">Autumn</h3>
+                <a class=" button1" href="/HTML/summer.html">MORE</a>
+            </article>
+
+            <article class="sea-grid-item2 sea">
+                <h3 class="font-bold">Winter</h3>
+                <a class=" button2" href="#">MORE</a>
+            </article>
+
+            <article class="sea-grid-item3 sea">
+                <h3 class="font-bold">Spring</h3>
+                <a class=" button3" href="#">MORE</a>
+            </article>
+
+            <article class="sea-grid-item4">
+                <h3 class="font-bold">Summer</h3>
+                <a class=" button4" href="#">MORE</a>
+            </article>
+        </div>
+
     </section>
+
     <footer>
         <p>2001 - 2022 Active & Adventure Tours Mongolia LLC © Branded as Tour Mongolia</p>
     </footer>
 </body>
+
 </html>
