@@ -250,14 +250,82 @@ header .header-right nav>ul>li>a:hover::after{
   /* -webkit-transform: rotate(45deg) translate(-6px, -8px); */
   transform: rotate(45deg) translate(-6px, -8px);
 }
-
-footer{
-    margin-top: 5rem;
-    text-align: center;
-    background-color: var(--footer-bg-color);
-    color: rgba(255, 255, 255, 0.75);
-    padding: 2rem;
+.page-title-height {
+    height: 40vh;
 }
+
+.act {
+    background: url("/exp_pic/act.webp") center center/cover no-repeat;
+}
+
+.page-title-height .page-title-name {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 40vh;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-title-height .page-title-name h2 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+}
+
+.title-desc {
+    margin: 2rem 4rem;
+    word-spacing: 0.2rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.experiences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* mobile repeat багасгана */
+}
+
+.experiences .exp-overlay img {
+    width: 25rem;
+    display: block;
+    height: auto;
+}
+
+.experiences .exp-overlay {
+    width: 25rem;
+    margin: 0 2rem 5rem 2rem;
+    position: relative;
+}
+
+/* mobule exp repeat бага болгоно */
+.experiences .exp-overlay .overlay {
+    position: absolute;
+    /* зураг дээр байршуулах */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    /* hover хийсний дараагаар Height 100% болгож өгөх */
+    height: 30%;
+    transition-property: all;
+    transition: 0.5s ease;
+}
+
+.exp-overlay:hover .overlay {
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
 
 .mongol {
     background: url("/PICTURES/fun.webp") center center/cover no-repeat;
