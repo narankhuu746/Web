@@ -1,75 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="tour mongolia, mongoloian tour, top tour">
-    <title>TOUR MONGOLIA</title>
+    <meta name="description" content="tour funny, tours, mongolia, national tour, daily tour, adventure tour, mongolia special tour">
+    <title>Tour</title>
+    <link rel="stylesheet" href="/CSS/our.css">
+    <script src="https://kit.fontawesome.com/fb1fcdd475.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
 </head>
 <body>
     <!-- nav хэсэг -->
     <header>
-        <div>
+        <div class="logo">
             <img src="/PICTURES/logo.webp" alt="logo">
-            <h1>Tour Mongolia</h1>
+            <h1 id="main-title">Tour Mongolia</h1>
         </div>
-        <div>
-            <img src="/PICTURES/insta.webp" alt="instagram" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/fb.webp" alt="facebook" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/yt.webp" alt="youtube" style="height:50px ; width: 50px;">
+        <div class="header-right">
+            <div id="social">
+                <img src="/PICTURES/insta.webp" alt="instagram">
+                <img src="/PICTURES/fb.webp" alt="facebook">
+                <img src="/PICTURES/yt.webp" alt="youtube">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown"><a href="#">Tour</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-10r"><a href="#">Daily & Short</a></li>
+                            <li class="wi-10r"><a href="#">Discovery</a></li>
+                            <li class="wi-10r"><a href="#">Adventure</a></li>
+                            <li class="wi-10r"><a href="#">Group</a></li>
+                            <li class="wi-10r"><a href="/HTML/tour.html" id="current">Family Fun</a></li>
+                            <li class="wi-10r"><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                    <li class="dropdown"><a href="#">Experiences</a>
+                        <ul  class="dropdown-content ">
+                            <li class="wi-15r"><a href="/HTML/experiences.html">Activities</a></li>
+                            <li class="wi-15r"><a href="#">Art</a></li>
+                            <li class="wi-15r"><a href="#">Attractions</a></li>
+                            <li class="wi-15r"><a href="#">Meet Mongolians</a></li>
+                            <li class="wi-15r"><a href="#">Stay at Luxury Camps</a></li>
+                            <li class="wi-15r"><a href="#">Steppe Eco camp</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/aboutus.html">About</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" onclick="toggleMobileMenu(this)">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div>
+                    <ul id="mobile-menu">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#" id="current">Tour</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="#">Daily & Short</a></li>
+                                <li class="mar-l-1"><a href="#">Discovery</a></li>
+                                <li class="mar-l-1"><a href="#">Adventure</a></li>
+                                <li class="mar-l-1"><a href="#">Group</a></li>
+                                <li class="mar-l-1"><a href="/HTML/tour.html"  id="current">Family Fun</a></li>
+                                <li class="mar-l-1"><a href="#">Special</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                        <li><a href="#">Experiences</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="/HTML/experiences.html">Activities</a></li>
+                                <li class="mar-l-1"><a href="#">Art</a></li>
+                                <li class="mar-l-1"><a href="#">Attractions</a></li>
+                                <li class="mar-l-1"><a href="#">Meet Mongolians</a></li>
+                                <li class="mar-l-1"><a href="#">Stay at Luxury Camps</a></li>
+                                <li class="mar-l-1"><a href="#">Steppe Eco camp</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/aboutus.html">About</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Tour</a>
-                <ul>
-                    <li><a href="#">DAILY & SHORT</a></li>
-                    <li><a href="#">DISCOVERY</a></li>
-                    <li><a href="#">ADVENTURE</a></li>
-                    <li><a href="#">GROUP</a></li>
-                    <li><a href="/HTML/tour.html">FAMILY FUN</a></li>
-                    <li><a href="#">SPECIAL</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/mongolia.html">Mongolia</a></li>
-                <li><a href="#">Experiences</a>
-                <ul>
-                    <li><a href="/HTML/experiences.html">Activities</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Attractions</a></li>
-                    <li><a href="#">Meet Mongolians</a></li>
-                    <li><a href="#">Stay at Luxury Camps</a></li>
-                    <li><a href="#">Steppe Eco camp</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/aboutus.html">About us</a></li>
-            </ul>
-        </nav>
     </header>
-    <div>
+      <div class="ourzurag">
         <img src="/PICTURES/our1.webp" alt="mongolia">
-        <h2>OUR MISSION</h2>
+        <h2 id="main-title">OUR MISSION</h2>
     </div>
+
    
     <div>
-        <p>Being the leading green economy supporter and most responsible inbound tour operator in Mongolia to provide
+        <p id="p">Being the leading green economy supporter and most responsible inbound tour operator in Mongolia to provide
             tourism services comply with international standards.</p>
     </div>
-    <div>
-        <img src="/PICTURES/our2.webp" alt="mongolia">
+    <div class="our2zurag">
+        <article class="pr">
+        <img class="our1" src="/PICTURES/our2.webp" alt="our">
+    </article>
+    <article class="pr1">
         <div>
-            <p>Cooperates with local & global partners (as connecting local communities to global market & international
+            <p class="p1">Cooperates with local & global partners (as connecting local communities to global market & international
                 businesses to micro-entrepreneurs)</p>
-            <p>Deals with groups & FITs (in order maximize benefits to our clients and minimize impacts to environment
+            <p class="p1">Deals with groups & FITs (in order maximize benefits to our clients and minimize impacts to environment
                 we keep maximum number of parties up to 14pax in our adventure treks)</p>
-            <p>Offers tailor made programs & set itineraries ( there is always flexibilities in our tours even those
+            <p class="p1">Offers tailor made programs & set itineraries ( there is always flexibilities in our tours even those
                 operate according to set itineraries )</p>
-            <p>Generates happy and satisfied clients (we do our best efforts to make our clients enjoyed with the
+            <p class="p1">Generates happy and satisfied clients (we do our best efforts to make our clients enjoyed with the
                 services as getting over their expectations. In serving our clients before, during and after a trip we
                 strive to build a complete satisfaction)</p>
         </div>
+    </article>
     </div>
     <footer>
         <p>2001 - 2022 Active & Adventure Tours Mongolia LLC © Branded as Tour Mongolia</p>
