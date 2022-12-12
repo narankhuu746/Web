@@ -1,68 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="tour mongolia, mongoloian tour, top tour">
-    <title>TOUR MONGOLIA</title>
+    <meta name="description" content="tour funny, tours, mongolia, national tour, daily tour, adventure tour, mongolia special tour">
+    <title>Tour</title>
+    <link rel="stylesheet" href="summer.css">
+    <script src="https://kit.fontawesome.com/fb1fcdd475.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script>
+        function toggleMobileMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
 </head>
-
 <body>
     <!-- nav хэсэг -->
     <header>
-        <div>
+        <div class="logo">
             <img src="/PICTURES/logo.webp" alt="logo">
-            <h1>Tour Mongolia</h1>
+            <h1 id="main-title">Tour Mongolia</h1>
         </div>
-        <div>
-            <img src="/PICTURES/insta.webp" alt="instagram" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/fb.webp" alt="facebook" style="height:50px ; width: 50px;">
-            <img src="/PICTURES/yt.webp" alt="youtube" style="height:50px ; width: 50px;">
+        <div class="header-right">
+            <div id="social">
+                <img src="/PICTURES/insta.webp" alt="instagram">
+                <img src="/PICTURES/fb.webp" alt="facebook">
+                <img src="/PICTURES/yt.webp" alt="youtube">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown"><a href="#">Tour</a>
+                        <ul class="dropdown-content ">
+                            <li class="wi-10r"><a href="#">Daily & Short</a></li>
+                            <li class="wi-10r"><a href="#">Discovery</a></li>
+                            <li class="wi-10r"><a href="#">Adventure</a></li>
+                            <li class="wi-10r"><a href="#">Group</a></li>
+                            <li class="wi-10r"><a href="/HTML/tour.html" id="current">Family Fun</a></li>
+                            <li class="wi-10r"><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                    <li class="dropdown"><a href="#">Experiences</a>
+                        <ul  class="dropdown-content ">
+                            <li class="wi-15r"><a href="/HTML/experiences.html">Activities</a></li>
+                            <li class="wi-15r"><a href="#">Art</a></li>
+                            <li class="wi-15r"><a href="#">Attractions</a></li>
+                            <li class="wi-15r"><a href="#">Meet Mongolians</a></li>
+                            <li class="wi-15r"><a href="#">Stay at Luxury Camps</a></li>
+                            <li class="wi-15r"><a href="#">Steppe Eco camp</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML/aboutus.html">About</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" onclick="toggleMobileMenu(this)">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div>
+                    <ul id="mobile-menu">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#" id="current">Tour</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="#">Daily & Short</a></li>
+                                <li class="mar-l-1"><a href="#">Discovery</a></li>
+                                <li class="mar-l-1"><a href="#">Adventure</a></li>
+                                <li class="mar-l-1"><a href="#">Group</a></li>
+                                <li class="mar-l-1"><a href="/HTML/tour.html"  id="current">Family Fun</a></li>
+                                <li class="mar-l-1"><a href="#">Special</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/mongolia.html">Mongolia</a></li>
+                        <li><a href="#">Experiences</a>
+                            <ul>
+                                <li class="mar-l-1"><a href="/HTML/experiences.html">Activities</a></li>
+                                <li class="mar-l-1"><a href="#">Art</a></li>
+                                <li class="mar-l-1"><a href="#">Attractions</a></li>
+                                <li class="mar-l-1"><a href="#">Meet Mongolians</a></li>
+                                <li class="mar-l-1"><a href="#">Stay at Luxury Camps</a></li>
+                                <li class="mar-l-1"><a href="#">Steppe Eco camp</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML/aboutus.html">About</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Tour</a>
-                <ul>
-                    <li><a href="#">DAILY & SHORT</a></li>
-                    <li><a href="#">DISCOVERY</a></li>
-                    <li><a href="#">ADVENTURE</a></li>
-                    <li><a href="#">GROUP</a></li>
-                    <li><a href="/HTML/tour.html">FAMILY FUN</a></li>
-                    <li><a href="#">SPECIAL</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/mongolia.html">Mongolia</a></li>
-                <li><a href="#">Experiences</a>
-                <ul>
-                    <li><a href="/HTML/experiences.html">Activities</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Attractions</a></li>
-                    <li><a href="#">Meet Mongolians</a></li>
-                    <li><a href="#">Stay at Luxury Camps</a></li>
-                    <li><a href="#">Steppe Eco camp</a></li>
-                </ul>
-                </li>
-                <li><a href="/HTML/aboutus.html">About us</a></li>
-            </ul>
-        </nav>
     </header>
-    <div>
-        <img src="/PICTURES/summerdeed.webp" alt="mongolia">
-        <h2>SUMMER</h2>
+    <div class="deedzurag">
+        <img src="summerdeed.png" alt="mongolia">
+        <h2 class="text">SUMMER</h2>
     </div>
-    <div>
-        <div>
-            <h3>Summer in figures</h3>
+      <div class="main">
+    <div class="container">
+        <article class="a1">
+            <h3 class="text2">Summer in figures</h3>
             <ul>
                 <li>+15°C – +32°C</li>
                 <li>Around 100 days</li>
                 <li>June – August </li>
             </ul>
-        </div>
-        <p>
+        </article>
+    </div>
+    <div class="container">
+        <p class="text3">
             Summer is the warmest season in Mongolia. It is pleasantly warm and relatively hot in the southern Gobi
             region where midsummer temperatures peak at around 40 degrees. Generally, the precipitation is higher in
             summer than any time of the year. The summer of Mongolia can be unpredictable, sometimes it gets really hot
@@ -70,102 +118,118 @@
             perfect time when pasture, grass and crops grow and livestock gain weight and fat.
         </p>
     </div>
-
-
+    </div>
 
     <section>
-        <h3>JUNE</h3>
-        <div>
-            <img src="/PICTURES/summer1.webp" alt="mongolia">
-            <p>The highlight of June is the Roaring Hooves festival where folk and modern music echo the sounds of horse
+        <div class="b1">
+            <article class="a3"> 
+            <img class="summer1" src="summer1.png" alt="mongolia">
+            </article>
+            <article class="a4">
+                        <h3 class="text4" >JUNE</h3>
+            <p class="pr1">The highlight of June is the Roaring Hooves festival where folk and modern music echo the sounds of horse
                 hooves and horses. Since 1999 Roaring Hooves annual music festival invites artists from all over Europe,
                 Asia, and Americas to perform within the natural beauty of Gobi. It is a great melting pot of
                 internationally well-known musicians, teachers, composers gather in Mongolia to present their
                 masterpiece.</p>
-        </div>
-        <div>
-
-            <h4>Yak Festival</h4>
-            <p>An equally interesting festival held in June is the Yak Festival . It is the only festival where people
+        </article>
+    </div>
+        <div class="b1">
+            <article class="a4">
+            <h3 class="text4">YAK FESTIVAL</h3>
+            <p class="pr1">An equally interesting festival held in June is the Yak Festival . It is the only festival where people
                 bet on yak racing, yak bucking, yak lassoing and yak polo also available for everyone to participate.
                 Take a break from the event enjoying yak snacks and other delicious delicacies prepared fresh by local
                 vendors. You can also buy yak wool goods for warmth and comfort.</p>
-            <img src="/PICTURES/summer2.webp" alt="mongolia">
+            </article>
+            <article class="a3">
+            <img class="summer1" src="summer2.png" alt="mongolia">
+        </article>
+
+        
         </div>
     </section>
 
 
     <section>
-        <h3>JULY</h3>
-        <div>
-            <img src="/PICTURES/summer3.webp" alt="mongolia">
-            <h4>Naadam Festival</h4>
-            <p>Naadam Festival of Mongolia cannot be appreciated fully without attending a Naadam celebration. There’s
+        <div class="b1">
+            <article class="a3">
+            <img class="summer1" src="summer3.png" alt="mongolia">
+        </article>
+        <article class="a4">
+           <h3 class="text4">JULY</h3>
+            <p class="pr1">Naadam Festival of Mongolia cannot be appreciated fully without attending a Naadam celebration. There’s
                 total of three Manly sports (Wrestling, archery and horse racing) who challenge their strength, accuracy
                 and the speed of the Mongolian Horse. Be it the one in Ulaanbaatar or a smaller one in the countryside,
                 it is a great celebration to enjoy the ancient customs and to keep the traditions alive.</p>
+            </article>
         </div>
-    </section>
+    
 
-    <section>
-        <h3>AUGUST</h3>
-        <div>
-            <p>On summer season, urban citizens (or UB citizens) have active demands to get outside for travel. From the
+         <div class="b1">
+            <article class="a4">
+            <h3 class="text4">AUGUST</h3>
+            <p class="pr1">On summer season, urban citizens (or UB citizens) have active demands to get outside for travel. From the
                 famous Terelj National Park to the Blue pearl lake Khuvsgul, from the wild horses home of Khustai
                 National Park to the golden sand dunes of Gobi desert, everywhere and anywhere in the country, people
                 can surrounded by the beautiful nature and lively culture. Some, of course, still stay in the city and
                 enjoy city life under the sun and shining stars.</p>
-            <img src="/PICTURES/summer4.webp" alt="mongolia">
+            </article>
+            <article class="a3">
+            <img class="summer1" src="summer4.png" alt="mongolia">
+        </article>
         </div>
     </section>
+
     <section>
-        <h3>RELATED TOUR</h3>
+        <h2 class="text4">RELATED TOUR</h2>
     </section>
-    <section>
-        <h2>TOP TOUR</h2>
-        <article>
-            <a href="#">
+     <div class="section mar-t-5">
+        <div class="articles">
+            <article>
+                <a href="/HTML/tour_info.html">
+                    
+                    <img src="tour1.png" alt="tour image">
+                    <h3>Scenes of National Parks</h3>
+                    <ul>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>3 Days 2 Nights</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Exploring varied natural landscapes</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Visiting cultural heritage sites</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Experiencing nomad culture</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Hiking</li>
+                    </ul>
+                </a>
+            </article>
+            <article>
+                <a href="#">
+        
+                    <img src="tour3.png" alt="tour image">
+                    <h3>Contrasts of Mongolia</h3>
+                    <ul>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>8 Days 7 Nights</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Vast & diverse Gobi desert</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Taiga & Khuvsgul Lake</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Wildlife Watching</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Luxury accommodation</li>
+                    </ul>
+                </a>
+            </article>
+            <article>
+                <a href="#">
+        
+                    <img src="tour2.png" alt="tour image">
+                    <h3>On Horseback to Mystical Taiga</h3>
+                    <ul>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>12 Days 11 Nights</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Explore the Mystical Taiga</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Visit Reindeer & Khuvsgul lake</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Stay with Tsaachin family</li>
+                        <li class="mar-b-05"><i class="fa-solid fa-check"></i>Luxury accommodation</li>
+                    </ul>
+                </a>
+            </article>
+    </div>
 
-                <img src="/PICTURES/tour1.webp" alt="tour image">
-                <h3>Scenes of National Parks</h3>
-                <ul>
-                    <li>3 Days 2 Nights</li>
-                    <li>Exploring varied natural landscapes</li>
-                    <li>Visiting cultural heritage sites</li>
-                    <li>Experiencing nomad culture</li>
-                    <li>Hiking</li>
-                </ul>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-
-                <img src="/PICTURES/tour2.webp" alt="tour image">
-                <h3>Contrasts of Mongolia</h3>
-                <ul>
-                    <li>8 Days 7 Nights</li>
-                    <li>Vast & diverse Gobi desert</li>
-                    <li>Taiga & Khuvsgul Lake</li>
-                    <li>Wildlife Watching</li>
-                    <li>Luxury accommodation</li>
-                </ul>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-
-                <img src="/PICTURES/tour3.webp" alt="tour image">
-                <h3>On Horseback to Mystical Taiga</h3>
-                <ul>
-                    <li>12 Days 11 Nights</li>
-                    <li>Explore the Mystical Taiga</li>
-                    <li>Visit Reindeer & Khuvsgul lake</li>
-                    <li>Stay with Tsaachin family</li>
-                    <li>Luxury accommodation</li>
-                </ul>
-            </a>
-        </article>
-    </section>
     <footer>
         <p>2001 - 2022 Active & Adventure Tours Mongolia LLC © Branded as Tour Mongolia</p>
     </footer>
