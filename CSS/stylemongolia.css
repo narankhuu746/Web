@@ -1,0 +1,627 @@
+:root {
+    --title-red-color: #902A0A;
+    --footer-bg-color: #383232;
+    --main-bg-color: #f0f0f0;
+    --title-red-color05: #90290a34;
+    --bt-green: #376A37;
+    --check-green: #00ff00;
+}
+.border-r-20{
+    border-radius: 20px;
+}
+.cgreen{
+    color: var(--check-green);
+}
+.red{
+    color: var(--title-red-color);
+}
+.red05{
+    color: var(--title-red-color05);
+}
+.mar-r-05{
+    margin-right: 0.5rem;
+}
+.mar-l-1{
+    margin-left: 2rem;
+}
+.mar-b-05 {
+    margin-bottom: 0.5rem;
+}
+.mar-b-1 {
+    margin-bottom: 1rem;
+}
+.mar-t-5 {
+    margin-top: 5rem;
+}
+.mar-t-2 {
+    margin-top: 2rem;
+}
+.mar-b-5 {
+    margin-bottom: 5rem;
+}
+.half-br{
+    border-radius: 3% 3% 0 0;
+}
+.full-br{
+    border-radius: 3% 3% 3% 3%;
+}
+.wi-10r{
+    min-width: 10rem;
+}
+.wi-15r{
+    min-width: 13rem;
+}
+.font-bold{
+    font-weight: bold;
+}
+.t-center{
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 100;
+
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.5rem;
+}
+
+/* header хэсэг */
+header {
+    display: grid;
+    justify-content: space-between;
+    padding: 0 7rem;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.729);
+    backdrop-filter: blur(5px);
+    box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    height: 6rem;
+    display: grid;
+    grid-template-areas: 
+    "logo nav nav"
+    ;
+}
+header .header-right{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* nav хэсэг */
+/* mobile header */
+header .header-right nav>ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .header-right nav>ul>li{
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+header .header-right nav>ul>li a{
+    color: black; 
+    display: inline-block;
+    position: relative;
+}
+header .header-right nav>ul>li a:hover{
+    color: var(--title-red-color);
+}
+header .header-right nav>ul>li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--title-red-color);
+    transition: transform 0.25s ease-in;
+}
+header .header-right nav>ul>li>a:hover::after{
+    text-decoration: underline;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#current {
+    color: var(--title-red-color);
+}
+/* navbar dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.dropdown:hover .dropdown-content li {
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-bottom: solid 1px var(--title-red-color05);
+}
+.dropdown .dropdown-content li:hover{
+    border-bottom: solid 1px var(--title-red-color);
+    font-weight: bold;
+}
+
+
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+.logo h1 {
+    
+    letter-spacing: 0.3rem;
+    width: 18rem;
+}
+#social {
+    display: flex;
+    justify-content: end;
+}
+#social img {
+    margin: 0.2rem 0.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.logo img{
+    width: 5rem;
+    height: 5.6rem;
+}
+#main-title{
+    font-size: 1.6rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    color: var(--title-red-color);
+}
+/* hamnurger menu display none */
+#hamburger{
+    display: none;
+    /* display: flex; */
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    top: 2rem;
+    transition: 0.4s;
+    
+}
+#mobile-menu{
+    display: none;
+}
+.open #mobile-menu{
+    display: block;
+    position: absolute;
+    top: 4rem;
+    background: var(--main-bg-color);
+    backdrop-filter: blur(5px);
+    right: 0;
+    width: 11rem;
+    height: auto;
+    box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
+    
+}
+.open #mobile-menu>li li{
+    opacity: 0.8;
+}
+#hamburger .bars div{
+    width: 2rem;
+    background: var(--title-red-color);
+    height: 0.1rem;
+    margin: 0.5rem;
+    position: relative;
+    right: 0;
+    transition: 0.4s;
+}
+.open .bar1 {
+    /* -webkit-transform: rotate(-45deg) translate(-6px, 6px); */
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+  
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  /* -webkit-transform: rotate(45deg) translate(-6px, -8px); */
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+
+
+.mongol {
+    background: url("/PICTURES/fun.webp") center center/cover no-repeat;
+}
+
+/*globus*/
+.mon-grid-item1 img {
+    width: 300px;
+    height: 300px;
+}
+.backroundcolor{
+    display: flex;
+    background-color:#F1F1F1;
+}
+/*deesh bolgoh*/
+.grid-globus {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+@media only screen and (max-width: 930px ) {
+    .grid_globus {
+        grid-template-columns: 1fr;
+        grid-column: 2;
+        grid-template-areas:
+            "mon-grid-item1"
+            "mon-grid-item2";
+    }
+} 
+.item {
+    justify-self: center;
+}
+.mon-grid-item2 p b {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+
+}
+
+.mon-grid-item2 ul {
+    margin-left: 60px;
+}
+
+
+
+
+
+/*-----------------------------region-----------------------------------------------*/
+
+.region_grid {
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 1180px) {
+    .region_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 2;
+        grid-template-areas:
+            "re-grid-item1 re-grid-item2"
+            "re-grid-item3 re-grid-item4"
+            "re-grid-item5 re-grid-item6";
+    }
+}
+
+@media only screen and (max-width: 727px) {
+    .region_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column: 1;
+        grid-template-areas:
+            "re-grid-item1"
+            "re-grid-item2"
+            "re-grid-item3"
+            "re-grid-item4"
+            "re-grid-item5"
+            "re-grid-item6";
+    }
+}
+
+[title~=map] {
+    width: 250px;
+    height: 250px;
+}
+
+.mongolia_article {
+    justify-self: center;
+    border: 1px solid rgb(158, 193, 145);
+    border-radius: 5%;
+    text-align: center;
+    font-size: 16px;
+    align-items: center;
+    width: 300px;
+    height: 380px;
+}
+
+.mongolia_article h3 {
+    color: green;
+}
+
+.mongolia_article .button {
+    display: inline-block;
+    justify-content: center;
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    
+    border: 1px solid rgb(55, 106, 55);
+    background-color: rgb(222, 234, 225);
+    color: #376A37;
+}
+
+
+
+
+
+/*season*/
+.sea-grid {
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+@media only screen and (max-width: 1180px) {
+    .sea-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 2;
+        grid-template-areas:
+            "sea-grid-item1 sea-grid-item2"
+            "sea-grid-item3 sea-grid-item4";
+    }
+}
+@media only screen and (max-width:722px) {
+    .sea-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column: 1;
+        grid-template-areas:
+            "sea-grid-item1" 
+            " sea-grid-item2"
+            "sea-grid-item3"
+             " sea-grid-item4";
+    }
+}
+.sea-grid-item1 {
+    background-image: url(/PICTURES/autumn.webp);
+}
+
+.sea-grid-item2 {
+    background-image: url(/PICTURES/winter.webp);
+}
+
+.sea-grid-item3 {
+    background-image: url(/PICTURES/spring.webp);
+}
+
+.sea-grid-item4 {
+    background-image: url(/PICTURES/summerzurag.webp);
+}
+
+.sea-grid article {
+    place-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    height: 350px;
+    width: 250px;
+    outline-offset: -10px;
+    outline: 1px solid #ffffff;
+}
+
+.h2-size {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.sea-grid article h3 {
+    color: rgb(246, 246, 246);
+    margin-top: 2rem;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(90, 87, 87), 0 0 1em rgb(127, 127, 129), 0 0 0.2em rgb(122, 122, 125);
+}
+
+.sea-grid article a {
+    display: inline-block;
+    /* margin-bottom:2rem; */
+    /* margin-top:4rem; */
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+    margin-top: 10rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgb(90, 87, 87), 0 0 1em rgb(127, 127, 129), 0 0 0.2em rgb(122, 122, 125);
+
+}
+
+.button1 {
+    border: 1px solid rgb(255, 141, 75);
+    background-color: rgb(247, 109, 17);
+}
+
+.button2 {
+    border: 1px solid rgb(121, 235, 255);
+    background-color: rgb(126, 193, 255);
+}
+
+.button3 {
+    border: 1px solid rgb(249, 224, 82);
+    background-color: rgb(255, 250, 97);
+}
+
+.button4 {
+    border: 1px solid rgb(98, 199, 99);
+    background-color: rgb(126, 220, 34);
+}
+
+/*western mongolia*/
+
+.westr {
+    background: url("/PICTURES/western.webp") center center/cover no-repeat;
+}
+.deed_txt{
+    width: 90vw;
+    margin: auto; 
+}
+.grid_west {
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .grid_west {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "grid-item1"
+            "grid-item2"
+            "grid-item3";
+    }
+}
+.grid_west .grid-item3 li {
+    list-style-type: decimal;
+    text-align: left;
+}
+
+.img_west {
+    width: 300px;
+    height: 380px;
+
+}
+
+.media_csroler {
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 20%;
+    /*hajuu tiishee boloh*/
+    overflow-x: auto;
+    /*ashiglagdaagui dee zurgiin unen hemjee gargana*/
+    overscroll-behavior-inline: contain;
+
+}
+
+/*dood taliin hajuu tiish n bolgodog yum alga blgono*/
+.media_csroler::-webkit-scrollbar {
+    width: 0;
+}
+
+.media_element { 
+    position: relative;
+    justify-content: space-between;
+    width: 300px;
+    height: 380px;
+    margin-left: 20px;
+
+}
+.img1{
+    background-image: url(/PICTURES/climing.webp);
+}
+.img2{
+    background-image: url(/PICTURES/amarbayasgalan\ \(1\).webp);
+}
+.img3{
+    background-image: url(/PICTURES/khowsgol.webp);
+}
+.img4{
+    background-image: url(/PICTURES/khan.webp);
+}
+
+.media_csroler .media_element h3 {
+    color: #ffffff;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgb(90, 87, 87), 0 0 1em rgb(127, 127, 129), 0 0 0.2em rgb(122, 122, 125);
+    margin-top: 3rem;
+}
+
+
+.bor-outline {
+    outline-offset: -10px;
+    outline: 1px solid #ffffff;
+}
+
+
+
+/*top trivel*/
+
+.top {
+    background: url("/PICTURES/top.webp") center center/cover no-repeat;
+}
+
+
+.grid_top {
+    display: grid;
+    width: 90vw;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .grid_top {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "top-item1 "
+            "top-item2"
+            "top-item3 "
+            "top-item4";
+    }
+}
+.top-item1 {
+    justify-items: end;
+}
+.line {
+    border-top: 3px solid hsl(0, 0%, 50%);
+}
+.top2-img {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    justify-items: start;
+}
+.top3-img {
+    width: 400px;
+    height: 300px;
+    box-shadow: -15px -15px;
+}
+
+.grid_top h3 {
+    color: rgb(163, 165, 165);
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.t-center4 p {
+    font-size: 20px;
+}
+
+
