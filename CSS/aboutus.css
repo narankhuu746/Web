@@ -352,7 +352,10 @@ height: auto;
      text-align: center;
      font-weight: bold;
 }
-
+.member2{
+     padding: 20px 20px 20px 20px;
+     width: 300px;
+}
 .tex2{
       text-align: center;
 }
