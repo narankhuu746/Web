@@ -251,7 +251,13 @@ header .header-right nav>ul>li>a:hover::after{
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
-
+footer{
+    margin-top: 5rem;
+    text-align: center;
+    background-color: var(--footer-bg-color);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+}
 
 .mongol {
     background: url("/PICTURES/fun.webp") center center/cover no-repeat;
