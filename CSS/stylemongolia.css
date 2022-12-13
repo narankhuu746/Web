@@ -336,7 +336,7 @@ header .header-right nav>ul>li>a:hover::after{
     width: 300px;
     height: 300px;
 }
-/*
+
 .backroundcolor{
     display: flex;
     background-color:#F1F1F1;
@@ -352,7 +352,7 @@ header .header-right nav>ul>li>a:hover::after{
 
 }
 @media only screen and (max-width: 930px ) {
-    .grid_globus {
+    .grid-globus {
         grid-template-columns: 1fr;
         grid-column: 2;
         grid-template-areas:
