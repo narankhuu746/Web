@@ -337,16 +337,13 @@ header .header-right nav>ul>li>a:hover::after{
     height: 300px;
 }
 
-.backroundcolor{
-    display: flex;
-    background-color:#F1F1F1;
-}
 /*deesh bolgoh*/
 .grid-globus {
     display: grid;
     width: 70%;
     margin: auto;
     align-items: center;
+    background-color:#F1F1F1;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
