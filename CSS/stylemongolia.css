@@ -336,6 +336,7 @@ header .header-right nav>ul>li>a:hover::after{
     width: 300px;
     height: 300px;
 }
+/*
 .backroundcolor{
     display: flex;
     background-color:#F1F1F1;
