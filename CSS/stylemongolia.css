@@ -348,7 +348,7 @@ header .header-right nav>ul>li>a:hover::after{
     gap: 2rem;
 
 }
-@media only screen and (max-width: 930px ) {
+@media only screen and (max-width: 440px ) {
     .grid-globus {
         grid-template-columns: 1fr;
         grid-column: 2;
