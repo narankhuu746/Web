@@ -340,7 +340,7 @@ header .header-right nav>ul>li>a:hover::after{
 /*deesh bolgoh*/
 .grid-globus {
     display: grid;
-    width: 70%;
+    width: 100%;
     margin: auto;
     align-items: center;
     background-color:#F1F1F1;
