@@ -78,7 +78,6 @@ body {
 /* header хэсэг */
 header {
     display: grid;
-    justify-content: space-between;
     padding: 0 7rem;
     position: sticky;
     top: 0;
@@ -87,7 +86,6 @@ header {
     box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
     z-index: 10;
     height: 6rem;
-    display: grid;
     grid-template-areas: 
     "logo nav nav"
     ;
