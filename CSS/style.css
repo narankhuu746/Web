@@ -171,10 +171,13 @@ header .header-right nav>ul>li>a:hover::after{
     align-items: center;
 }
 .logo h1 {
-    
+    position: relative;
     letter-spacing: 0.3rem;
     width: 18rem;
+    animation:animateright 0.8s
 }
+@keyframes animateright{
+    from{right:80px;opacity:0} to{right:0;opacity:1}}
 #social {
     display: flex;
     justify-content: end;
@@ -319,9 +322,9 @@ header .header-right nav>ul>li>a:hover::after{
 .section .articles article {
     margin: 1rem;
     border-radius: 3% 3% 3% 3%;
-    border-left: solid 1px rgba(0, 0, 0, 0.071);
-    border-bottom: solid 1px rgba(0, 0, 0, 0.071);
-    border-right: solid 1px rgba(0, 0, 0, 0.071);
+    border-left: solid 1px rgba(0, 0, 0, 0.05);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+    border-right: solid 1px rgba(0, 0, 0, 0.05);
 }
 .section .articles article img{
     width: 20rem;
@@ -335,7 +338,7 @@ header .header-right nav>ul>li>a:hover::after{
     color: rgb(0, 255, 0);
 }
 .section .articles article:hover{
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* section tours хэсэг framework)))) */
