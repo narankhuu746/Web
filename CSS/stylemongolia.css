@@ -171,10 +171,13 @@ header .header-right nav>ul>li>a:hover::after{
     align-items: center;
 }
 .logo h1 {
-    
+    position: relative;
     letter-spacing: 0.3rem;
     width: 18rem;
+    animation:animateright 0.8s
 }
+@keyframes animateright{
+    from{right:80px;opacity:0} to{right:0;opacity:1}}
 #social {
     display: flex;
     justify-content: end;
