@@ -92,9 +92,11 @@ a {
 body {
     font-family: 'Roboto Slab', serif;
     line-height: 1.5rem;
+    /* body хэсэгт орж ирэх бүх font-ийг Roboto Slab болгох хэрвээ тэр уншиигдххгүй бол serif болох*/
 }
 
 /* header хэсэг */
+/* header scrold-ход дээр үлдэх ёстой */
 header {
     display: grid;
     padding: 0 7rem;
@@ -130,12 +132,14 @@ header .header-right nav>ul>li {
     margin-bottom: 0.5rem;
 }
 
+/* inlineblock болон realitive болгосноор hover underline effect зөв ажиллана. */
 header .header-right nav>ul>li a {
     color: black;
     display: inline-block;
     position: relative;
 }
 
+/* cursor очиход өнгөө өөрчлөх */
 header .header-right nav>ul>li a:hover {
     color: var(--title-red-color);
 }
@@ -153,16 +157,14 @@ header .header-right nav>ul>li a::after {
 }
 
 header .header-right nav>ul>li>a:hover::after {
-    text-decoration: underline;
     transform: scaleX(1);
-    transform-origin: bottom left;
 }
 
 #current {
     color: var(--title-red-color);
 }
 
-/* navbar dropdown */
+/* navbar dropdown энэ хэсэгт энгийн үед display none байж байгаад cursor очиход flex colimn болоод бууна */
 
 .dropdown {
     position: relative;
@@ -178,7 +180,6 @@ header .header-right nav>ul>li>a:hover::after {
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
-    justify-content: start;
 }
 
 .dropdown:hover .dropdown-content li {
@@ -189,10 +190,9 @@ header .header-right nav>ul>li>a:hover::after {
 
 .dropdown .dropdown-content li:hover {
     border-bottom: solid 1px var(--title-red-color);
-    font-weight: bold;
 }
 
-
+/* navbar dropdown */
 
 .logo {
     grid-area: logo;
@@ -200,17 +200,19 @@ header .header-right nav>ul>li>a:hover::after {
     align-items: center;
 }
 
+/* logo хэсгээс 0,5s-д томсож орж ирнэ Энэ нь яг логоноос үг нь гарч ирж байгаам шиг */
 .logo h1 {
     position: relative;
     letter-spacing: 0.3rem;
     width: 18rem;
-    animation: animateright 0.8s
+    animation: animateright 0.5s
 }
 
 @keyframes animateright {
     from {
-        right: 80px;
-        opacity: 0
+        right: 100px;
+        opacity: 0;
+        font-size: 5px;
     }
 
     to {
@@ -218,6 +220,7 @@ header .header-right nav>ul>li>a:hover::after {
         opacity: 1
     }
 }
+
 
 #social {
     display: flex;
@@ -232,7 +235,7 @@ header .header-right nav>ul>li>a:hover::after {
 
 .logo img {
     width: 5rem;
-    height: 5.6rem;
+    height: auto;
 }
 
 #main-title {
@@ -248,7 +251,6 @@ header .header-right nav>ul>li>a:hover::after {
 /* hamnurger menu display none */
 #hamburger {
     display: none;
-    /* display: flex; */
     justify-content: end;
     align-items: center;
     position: relative;
@@ -257,6 +259,7 @@ header .header-right nav>ul>li>a:hover::after {
 
 }
 
+/* энгийн үед none байж байгаад display багасаад ирэхэд гарч ирнэ */
 #mobile-menu {
     display: none;
 }
@@ -264,13 +267,12 @@ header .header-right nav>ul>li>a:hover::after {
 .open #mobile-menu {
     display: block;
     position: absolute;
-    top: 4rem;
     background: var(--main-bg-color);
-    backdrop-filter: blur(5px);
-    right: 0;
+    top: 4rem;
+    right: -3rem;
     width: 11rem;
     height: auto;
-    box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -278,6 +280,7 @@ header .header-right nav>ul>li>a:hover::after {
     opacity: 0.8;
 }
 
+/* hamburger 3 зураас */
 #hamburger .bars div {
     width: 2rem;
     background: var(--title-red-color);
@@ -288,8 +291,8 @@ header .header-right nav>ul>li>a:hover::after {
     transition: 0.4s;
 }
 
+/* hamburger 3 зураас дээр дарахад x тэмдэг болно */
 .open .bar1 {
-    /* -webkit-transform: rotate(-45deg) translate(-6px, 6px); */
     transform: rotate(-45deg) translate(-6px, 6px);
 }
 
@@ -298,9 +301,342 @@ header .header-right nav>ul>li>a:hover::after {
 }
 
 .open .bar3 {
-    /* -webkit-transform: rotate(45deg) translate(-6px, -8px); */
     transform: rotate(45deg) translate(-6px, -8px);
 }
+
+/* hamburger 3 зураас дээр дарахад x тэмдэг болно */
+
+
+/* home хэсгийн css (((((((((((((((((((((((((((((((*/
+/* home img хэсэг */
+#home {
+    background: url("/PICTURES/home.webp") center center/cover no-repeat;
+    height: 90vh;
+}
+
+#home .home-img {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 90vh;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home .home-img div {
+    border: solid 0.1px white;
+    padding: 5rem;
+    word-spacing: 0.3rem;
+    width: 60vw;
+}
+
+#home .home-img div h2 {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    /* mobile font */
+}
+
+#home .home-img div p {
+    font-size: 1.2rem;
+}
+
+/* section tours хэсэг framework((((( */
+.top-tour h2 {
+    font-size: 1.8rem;
+    color: var(--title-red-color);
+    margin: 3rem;
+}
+
+.top-tour {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.section {
+    width: 80vw;
+    margin: auto;
+}
+
+.section .articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
+}
+
+/* tour-ийн cards хурц ирмэг үүсгэхгүй */
+.section .articles article {
+    margin: 1rem;
+    border-radius: 3% 3% 3% 3%;
+    border-left: solid 1px rgba(0, 0, 0, 0.05);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+    border-right: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.section .articles article img {
+    width: 100%;
+    border-radius: 3% 3% 0 0;
+}
+
+.section .articles article a {
+    color: black;
+}
+
+/* tour cards hover effect */
+.section .articles article:hover {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* section tours хэсэг framework)))) */
+
+/* footer хэсэг */
+footer {
+    margin-top: 5rem;
+    text-align: center;
+    background-color: var(--footer-bg-color);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+}
+
+.container .side {
+    display: grid;
+    grid-area: side;
+    height: 80vh;
+    width: 100%;
+    position: sticky;
+    top: 20vh;
+    margin-top: 1rem;
+}
+
+#booking form {
+    display: flex;
+    flex-direction: column;
+    background: var(--main-bg-color);
+    height: auto;
+}
+
+#booking form div {
+    display: flex;
+    padding: 1rem;
+}
+
+#booking form div i {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+
+}
+
+#booking form div input {
+    width: 70%;
+    position: absolute;
+    right: 1rem;
+    padding: 0.5rem;
+}
+
+#proceed {
+    background-color: black;
+    color: white;
+}
+
+.container .side section {
+    background: var(--main-bg-color);
+    align-items: center;
+}
+
+@media (max-width: 1400px) {
+    .experiences {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1150px) {
+    .section .articles {
+        grid-template-columns: repeat(2, 1fr);
+        /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
+    }
+}
+
+@media (max-width: 1100px) {
+
+    /* menu hamburger */
+    header nav {
+        display: none;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    #social {
+        display: none;
+    }
+
+    header {
+        padding: 0 3rem;
+    }
+
+    .container {
+        grid-template-areas:
+            "info info info"
+            "side side side"
+        ;
+    }
+
+    .container .side {
+        position: static;
+    }
+
+    .overview ul {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 910px) {
+
+    .experiences {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+
+    /* menu hamburger */
+    .section .articles {
+        grid-template-columns: repeat(1, 1fr);
+        /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
+    }
+
+    #home .home-img div {
+        padding: 1rem;
+    }
+
+    #home .home-img div h2 {
+        margin-bottom: 5rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        font-weight: 500;
+        /* mobile font */
+    }
+
+    #home .home-img div p {
+        font-size: 0.7rem;
+    }
+
+    .overview ul li {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    #choose {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 710px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    .logo h1 {
+        letter-spacing: 0.3rem;
+        width: 13rem;
+        font-size: 1rem;
+    }
+
+    #main-title {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        width: 4rem;
+        height: auto;
+    }
+
+    header {
+        height: 5rem;
+    }
+
+    .open #mobile-menu {
+        top: 3.5rem;
+    }
+
+    #hamburger {
+        top: 1.5rem;
+    }
+
+    .page-title-height .page-title-name h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .overview {
+        top: 5rem;
+    }
+
+    .container .info .tour-overview .item1 {
+        grid-template-columns: repeat(1, 1fr);
+        /* mobile repeat */
+    }
+
+    .title-desc {
+        margin: 2rem 1rem;
+    }
+
+    .open #mobile-menu {
+        right: -1rem;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .overview ul {
+        margin: 0 2%;
+    }
+
+    .overview ul li {
+        margin-left: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    .experiences .exp-overlay {
+        width: 20rem;
+        margin: 0 1rem 2rem 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .page-title-height {
     height: 40vh;
@@ -396,7 +732,7 @@ header .header-right nav>ul>li>a:hover::after {
     margin: auto;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
 
 }
 
@@ -409,7 +745,7 @@ header .header-right nav>ul>li>a:hover::after {
 @media only screen and (max-width: 440px) {
     .grid-globus {
         grid-template-columns: 1fr;
-        grid-column: 2;
+        grid-column: 1;
         grid-template-areas:
             "mon-grid-item1"
             "mon-grid-item2";
@@ -761,12 +1097,13 @@ div article:hover {
 }
 
 .top-item1 h3 {
-    justify-content: center;  
+    justify-content: center;
 }
 
 .top-item4 {
     text-align: justify;
 }
+
 .line {
     margin-top: 1rem;
     border-top: 2px solid hsl(0, 0%, 78%);
@@ -792,11 +1129,13 @@ div article:hover {
     font-size: 25px;
     align-items: flex-end;
 }
-.top-item4 h3{
+
+.top-item4 h3 {
     color: rgb(0, 0, 0);
     justify-content: center;
     font-weight: 100;
 }
+
 .t-center4 p {
     font-size: 20px;
 }
