@@ -73,9 +73,11 @@ a {
 body {
     font-family: 'Roboto Slab', serif;
     line-height: 1.5rem;
+    /* body хэсэгт орж ирэх бүх font-ийг Roboto Slab болгох хэрвээ тэр уншиигдххгүй бол serif болох*/
 }
 
 /* header хэсэг */
+/* header scrold-ход дээр үлдэх ёстой */
 header {
     display: grid;
     padding: 0 7rem;
@@ -107,11 +109,13 @@ header .header-right nav>ul>li{
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
+/* inlineblock болон realitive болгосноор hover underline effect зөв ажиллана. */
 header .header-right nav>ul>li a{
     color: black; 
     display: inline-block;
     position: relative;
 }
+/* cursor очиход өнгөө өөрчлөх */
 header .header-right nav>ul>li a:hover{
     color: var(--title-red-color);
 }
@@ -127,15 +131,12 @@ header .header-right nav>ul>li a::after{
     transition: transform 0.25s ease-in;
 }
 header .header-right nav>ul>li>a:hover::after{
-    text-decoration: underline;
     transform: scaleX(1);
-    transform-origin: bottom left;
 }
-
 #current {
     color: var(--title-red-color);
 }
-/* navbar dropdown */
+/* navbar dropdown энэ хэсэгт энгийн үед display none байж байгаад cursor очиход flex colimn болоод бууна */
 
 .dropdown {
     position: relative;
@@ -151,7 +152,6 @@ header .header-right nav>ul>li>a:hover::after{
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
-    justify-content: start;
 }
 .dropdown:hover .dropdown-content li {
     margin-top: 0.5rem;
@@ -160,24 +160,26 @@ header .header-right nav>ul>li>a:hover::after{
 }
 .dropdown .dropdown-content li:hover{
     border-bottom: solid 1px var(--title-red-color);
-    font-weight: bold;
 }
 
-
+/* navbar dropdown */
 
 .logo {
     grid-area: logo;
     display: flex;
     align-items: center;
 }
+/* logo хэсгээс 0,5s-д томсож орж ирнэ Энэ нь яг логоноос үг нь гарч ирж байгаам шиг */
 .logo h1 {
     position: relative;
     letter-spacing: 0.3rem;
     width: 18rem;
-    animation:animateright 0.8s
+    animation:animateright 0.5s
 }
 @keyframes animateright{
-    from{right:80px;opacity:0} to{right:0;opacity:1}}
+    from{right:100px;opacity:0; font-size: 5px;} to{right:0;opacity:1}}
+
+
 #social {
     display: flex;
     justify-content: end;
@@ -189,7 +191,7 @@ header .header-right nav>ul>li>a:hover::after{
 }
 .logo img{
     width: 5rem;
-    height: 5.6rem;
+    height: auto;
 }
 #main-title{
     font-size: 1.6rem;
@@ -203,7 +205,6 @@ header .header-right nav>ul>li>a:hover::after{
 /* hamnurger menu display none */
 #hamburger{
     display: none;
-    /* display: flex; */
     justify-content: end;
     align-items: center;
     position: relative;
@@ -211,24 +212,25 @@ header .header-right nav>ul>li>a:hover::after{
     transition: 0.4s;
     
 }
+/* энгийн үед none байж байгаад display багасаад ирэхэд гарч ирнэ */
 #mobile-menu{
     display: none;
 }
 .open #mobile-menu{
     display: block;
     position: absolute;
-    top: 4rem;
     background: var(--main-bg-color);
-    backdrop-filter: blur(5px);
-    right: 0;
+    top: 4rem;
+    right: -3rem;
     width: 11rem;
     height: auto;
-    box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.5);
     
 }
 .open #mobile-menu>li li{
     opacity: 0.8;
 }
+/* hamburger 3 зураас */
 #hamburger .bars div{
     width: 2rem;
     background: var(--title-red-color);
@@ -238,8 +240,8 @@ header .header-right nav>ul>li>a:hover::after{
     right: 0;
     transition: 0.4s;
 }
+/* hamburger 3 зураас дээр дарахад x тэмдэг болно */
 .open .bar1 {
-    /* -webkit-transform: rotate(-45deg) translate(-6px, 6px); */
     transform: rotate(-45deg) translate(-6px, 6px);
 }
   
@@ -248,17 +250,9 @@ header .header-right nav>ul>li>a:hover::after{
 }
 
 .open .bar3 {
-  /* -webkit-transform: rotate(45deg) translate(-6px, -8px); */
   transform: rotate(45deg) translate(-6px, -8px);
 }
-
-
-
-
-
-
-
-
+/* hamburger 3 зураас дээр дарахад x тэмдэг болно */
 
 
 /* home хэсгийн css (((((((((((((((((((((((((((((((*/
@@ -266,7 +260,6 @@ header .header-right nav>ul>li>a:hover::after{
 #home{
     background: url("/PICTURES/home.webp") center center/cover no-repeat;
     height: 90vh;
-    /* z-index: -1; */
 }
 #home .home-img{
     background-color: rgba(0, 0, 0, 0.3);
@@ -307,16 +300,13 @@ header .header-right nav>ul>li>a:hover::after{
     justify-content: center;
 }
 .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 80vw;
     margin: auto;
 }
 .section .articles{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
 }
 .section .articles article {
@@ -327,7 +317,7 @@ header .header-right nav>ul>li>a:hover::after{
     border-right: solid 1px rgba(0, 0, 0, 0.05);
 }
 .section .articles article img{
-    width: 20rem;
+    width: 100%;
     border-radius: 3% 3% 0 0;
 }
 .section .articles article a{
@@ -391,18 +381,17 @@ footer{
 .experiences{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
     /* mobile repeat багасгана */
-}
-.experiences .exp-overlay img{
-    width: 25rem;
-    display: block;
-    height: auto;
 }
 .experiences .exp-overlay{
     width: 25rem;
     margin: 0 2rem 5rem 2rem;
     position: relative; 
+    justify-self: center;
+}
+.experiences .exp-overlay img{
+    width: 100%;
+    height: 100%;
 }
 /* mobule exp repeat бага болгоно */
 .experiences .exp-overlay .overlay{
@@ -688,7 +677,7 @@ footer{
     }
     .logo img{
         width: 4rem;
-        height: 4.3rem;
+        height: auto;
     }
     header{
         height: 5rem;
@@ -714,6 +703,9 @@ footer{
     .title-desc{
         margin: 2rem 1rem;
     }
+    .open #mobile-menu{
+        right: -1rem;
+    }
     
 }
 @media (max-width: 580px) {
@@ -723,9 +715,6 @@ footer{
     .overview ul li{
         margin-left: 0.5rem;
         font-size: 0.6rem;
-    }
-    .experiences .exp-overlay img{
-        width: 20rem;
     }
     .experiences .exp-overlay{
         width: 20rem; 
