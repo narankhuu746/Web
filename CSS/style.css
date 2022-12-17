@@ -309,6 +309,7 @@ header .header-right nav>ul>li>a:hover::after{
     gap: 1rem;
     /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
 }
+/* tour-ийн cards хурц ирмэг үүсгэхгүй */
 .section .articles article {
     margin: 1rem;
     border-radius: 3% 3% 3% 3%;
@@ -323,10 +324,8 @@ header .header-right nav>ul>li>a:hover::after{
 .section .articles article a{
     color: black;
 }
-.section .articles article a ul li i {
-    margin-right: 0.5rem;
-    color: rgb(0, 255, 0);
-}
+
+/* tour cards hover effect */
 .section .articles article:hover{
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
 }
@@ -351,6 +350,7 @@ footer{
 
 
 /* page болгоны гарчиг ашигладаг хэмжээ */
+/* experience хуудсийн title хэсэг болгоны өндөр */
 .page-title-height{
     height: 40vh;
 }
@@ -358,6 +358,8 @@ footer{
 .act {
     background: url("/exp_pic/act.webp") center center/cover no-repeat;
 }
+
+/* text-ийг нь тод харагдуулахын тулд илүү div ашигласан background-color: rgba(0, 0, 0, 0.2); */
 .page-title-height .page-title-name{
     background-color: rgba(0, 0, 0, 0.2);
     height: 40vh;
@@ -368,24 +370,29 @@ footer{
     align-items: center;
     flex-direction: column;
 }
+
 .page-title-height .page-title-name h2{
     font-size: 3rem;
     letter-spacing: 0.25rem;
 }
+/* title desc хэсгийн css */
 .title-desc{
     margin: 2rem 4rem;
     word-spacing: 0.2rem;
     color: rgba(0, 0, 0, 0.9);
 }
-
+/* дээд талдаа 3 column */
 .experiences{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 90vw;
+    margin: auto;
+    gap: 2rem;
     /* mobile repeat багасгана */
 }
+/*  */
 .experiences .exp-overlay{
-    width: 25rem;
-    margin: 0 2rem 5rem 2rem;
+    width: 100%;
     position: relative; 
     justify-self: center;
 }
@@ -394,6 +401,7 @@ footer{
     height: 100%;
 }
 /* mobule exp repeat бага болгоно */
+/* энгийн үед height 30% байна hover үед 100% болгоод overlay хийнэ */
 .experiences .exp-overlay .overlay{
     position: absolute;
     /* зураг дээр байршуулах */
