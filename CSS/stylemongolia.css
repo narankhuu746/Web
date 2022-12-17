@@ -399,11 +399,13 @@ header .header-right nav>ul>li>a:hover::after {
     gap: 2rem;
 
 }
-#backround{
+
+#backround {
     display: flex;
-    width: 100%; 
+    width: 100%;
     background-color: #F1F1F1;
 }
+
 @media only screen and (max-width: 440px) {
     .grid-globus {
         grid-template-columns: 1fr;
@@ -500,11 +502,11 @@ header .header-right nav>ul>li>a:hover::after {
     color: #376A37;
 }
 
-.mongolia_article:hover{
+.mongolia_article:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
 }
 
-a:hover{
+a:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
 }
 
@@ -567,9 +569,11 @@ a:hover{
     outline-offset: -10px;
     outline: 1px solid #ffffff;
 }
-div article:hover{
+
+div article:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
 }
+
 .h2-size {
     font-size: 24px;
     font-weight: 300;
@@ -647,6 +651,10 @@ div article:hover{
     }
 }
 
+.grid-item1 {
+    text-align: justify;
+}
+
 .grid_west .grid-item3 li {
     list-style-type: decimal;
     text-align: left;
@@ -662,7 +670,7 @@ div article:hover{
     display: grid;
     gap: 2rem;
     grid-auto-flow: column;
-   /* grid-auto-columns: 100%;
+    /* grid-auto-columns: 100%;
     /*hajuu tiishee boloh*/
     overflow-x: auto;
     /*ashiglagdaagui dee zurgiin unen hemjee gargana*/
@@ -699,12 +707,15 @@ div article:hover{
 .img4 {
     background-image: url(/PICTURES/khan.webp);
 }
-.media_element:hover{
+
+.media_element:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
 }
-.clss:hover{
+
+.clss:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
 }
+
 .media_csroler .media_element h3 {
     color: #ffffff;
     align-items: center;
@@ -731,10 +742,11 @@ div article:hover{
 
 .grid_top {
     display: grid;
-    width: 90vw;
+    width: 80%;
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 0rem;
+    align-items: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -748,33 +760,43 @@ div article:hover{
     }
 }
 
-.top-item1 {
+.top-item1 h3 {
+    justify-content: center;  
+}
+
+.top-item4 {
+    text-align: justify;
+}
+.line {
+    margin-top: 1rem;
+    border-top: 2px solid hsl(0, 0%, 78%);
     justify-items: end;
 }
 
-.line {
-    border-top: 3px solid hsl(0, 0%, 50%);
-}
-
 .top2-img {
-    width: 400px;
+    width: 100%;
     height: 300px;
     border-radius: 5px;
-    justify-items: start;
 }
 
 .top3-img {
-    width: 400px;
+    width: 80%;
     height: 300px;
     box-shadow: -15px -15px;
 }
 
 .grid_top h3 {
+    display: flex;
     color: rgb(163, 165, 165);
     font-weight: 900;
     font-size: 25px;
+    align-items: flex-end;
 }
-
+.top-item4 h3{
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    font-weight: 100;
+}
 .t-center4 p {
     font-size: 20px;
 }
