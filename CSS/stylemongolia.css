@@ -662,7 +662,7 @@ div article:hover{
     display: grid;
     gap: 2rem;
     grid-auto-flow: column;
-    grid-auto-columns: 20%;
+   /* grid-auto-columns: 100%;
     /*hajuu tiishee boloh*/
     overflow-x: auto;
     /*ashiglagdaagui dee zurgiin unen hemjee gargana*/
@@ -699,7 +699,12 @@ div article:hover{
 .img4 {
     background-image: url(/PICTURES/khan.webp);
 }
-
+.media_element:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
+}
+.clss:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.215);
+}
 .media_csroler .media_element h3 {
     color: #ffffff;
     align-items: center;
