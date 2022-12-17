@@ -545,8 +545,8 @@ footer{
     margin: 2rem auto;
 }
 .price {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background: var(--main-bg-color);
     border-bottom: 1px solid black;
     padding: 1rem;
@@ -624,6 +624,10 @@ footer{
         "side side side"
         ;        
     }
+    .container .side{
+        position: static;
+    }
+
     .overview ul{
         margin-left: 5%;
         margin-right: 5%;
