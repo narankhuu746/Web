@@ -742,7 +742,7 @@ footer {
     background-color: #F1F1F1;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 732px) {
     .grid-globus {
         grid-template-columns: 1fr;
         grid-column: 1;
