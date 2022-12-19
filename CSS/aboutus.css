@@ -6,75 +6,67 @@
     --bt-green: #376A37;
     --check-green: #00ff00;
 }
-
-.border-r-20 {
+.border-r-20{
     border-radius: 20px;
 }
-
-.cgreen {
+.cgreen{
     color: var(--check-green);
 }
-
-.red {
+.red{
     color: var(--title-red-color);
 }
-
-.red05 {
+.red05{
     color: var(--title-red-color05);
 }
-
-.mar-r-05 {
+.mar-r-05{
     margin-right: 0.5rem;
 }
-
-.mar-l-1 {
+.mar-t-05{
+    margin-top: 0.5rem;
+}
+.mar-l-1{
     margin-left: 2rem;
 }
-
 .mar-b-05 {
     margin-bottom: 0.5rem;
 }
-
 .mar-b-1 {
     margin-bottom: 1rem;
 }
-
 .mar-t-5 {
     margin-top: 5rem;
 }
-
 .mar-t-2 {
     margin-top: 2rem;
 }
-
 .mar-b-5 {
     margin-bottom: 5rem;
 }
-
-.half-br {
+.half-br{
     border-radius: 3% 3% 0 0;
 }
-
-.full-br {
+.full-br{
     border-radius: 3% 3% 3% 3%;
 }
-
-.wi-10r {
+.wi-10r{
     min-width: 10rem;
 }
-
-.wi-15r {
+.wi-15r{
     min-width: 13rem;
 }
-
-.font-bold {
+.font-bold{
     font-weight: bold;
 }
-
-.t-center {
+.t-center{
     text-align: center;
 }
 
+.bg-white{
+    background: white;
+}
+.bg-grey{
+    background: var(--main-bg-color);
+}
 * {
     margin: 0;
     padding: 0;
@@ -83,12 +75,10 @@
     font-weight: 100;
 
 }
-
 a {
     text-decoration: none;
     color: black;
 }
-
 body {
     font-family: 'Roboto Slab', serif;
     line-height: 1.5rem;
@@ -107,44 +97,38 @@ header {
     box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.5);
     z-index: 10;
     height: 6rem;
-    grid-template-areas:
-        "logo nav nav"
+    grid-template-areas: 
+    "logo nav nav"
     ;
 }
-
-header .header-right {
+header .header-right{
     grid-area: nav;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 /* nav хэсэг */
 /* mobile header */
-header .header-right nav>ul {
+header .header-right nav>ul{
     display: flex;
     justify-content: space-between;
 }
-
-header .header-right nav>ul>li {
+header .header-right nav>ul>li{
     padding-left: 2rem;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
-
 /* inlineblock болон realitive болгосноор hover underline effect зөв ажиллана. */
-header .header-right nav>ul>li a {
-    color: black;
+header .header-right nav>ul>li a{
+    color: black; 
     display: inline-block;
     position: relative;
 }
-
 /* cursor очиход өнгөө өөрчлөх */
-header .header-right nav>ul>li a:hover {
+header .header-right nav>ul>li a:hover{
     color: var(--title-red-color);
 }
-
-header .header-right nav>ul>li a::after {
+header .header-right nav>ul>li a::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -155,40 +139,35 @@ header .header-right nav>ul>li a::after {
     background-color: var(--title-red-color);
     transition: transform 0.25s ease-in;
 }
-
-header .header-right nav>ul>li>a:hover::after {
+header .header-right nav>ul>li>a:hover::after{
     transform: scaleX(1);
 }
-
 #current {
     color: var(--title-red-color);
 }
-
 /* navbar dropdown энэ хэсэгт энгийн үед display none байж байгаад cursor очиход flex colimn болоод бууна */
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
+  
 .dropdown .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
 }
-
+  
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
 }
-
 .dropdown:hover .dropdown-content li {
     margin-top: 0.5rem;
     padding-left: 0.5rem;
     border-bottom: solid 1px var(--title-red-color05);
 }
-
-.dropdown .dropdown-content li:hover {
+.dropdown .dropdown-content li:hover{
     border-bottom: solid 1px var(--title-red-color);
 }
 
@@ -199,46 +178,31 @@ header .header-right nav>ul>li>a:hover::after {
     display: flex;
     align-items: center;
 }
-
 /* logo хэсгээс 0,5s-д томсож орж ирнэ Энэ нь яг логоноос үг нь гарч ирж байгаам шиг */
 .logo h1 {
     position: relative;
     letter-spacing: 0.3rem;
     width: 18rem;
-    animation: animateright 0.5s
+    animation:animateright 0.5s
 }
-
-@keyframes animateright {
-    from {
-        right: 100px;
-        opacity: 0;
-        font-size: 5px;
-    }
-
-    to {
-        right: 0;
-        opacity: 1
-    }
-}
+@keyframes animateright{
+    from{right:100px;opacity:0; font-size: 5px;} to{right:0;opacity:1}}
 
 
 #social {
     display: flex;
     justify-content: end;
 }
-
 #social img {
     margin: 0.2rem 0.5rem;
     width: 1.3rem;
     height: 1.3rem;
 }
-
-.logo img {
+.logo img{
     width: 5rem;
     height: auto;
 }
-
-#main-title {
+#main-title{
     font-size: 1.6rem;
     display: flex;
     text-align: center;
@@ -247,24 +211,21 @@ header .header-right nav>ul>li>a:hover::after {
     font-weight: 100;
     color: var(--title-red-color);
 }
-
 /* hamnurger menu display none */
-#hamburger {
+#hamburger{
     display: none;
     justify-content: end;
     align-items: center;
     position: relative;
     top: 2rem;
     transition: 0.4s;
-
+    
 }
-
 /* энгийн үед none байж байгаад display багасаад ирэхэд гарч ирнэ */
-#mobile-menu {
+#mobile-menu{
     display: none;
 }
-
-.open #mobile-menu {
+.open #mobile-menu{
     display: block;
     position: absolute;
     background: var(--main-bg-color);
@@ -273,15 +234,13 @@ header .header-right nav>ul>li>a:hover::after {
     width: 11rem;
     height: auto;
     box-shadow: 0.2px 0.2px 0.2px rgba(0, 0, 0, 0.5);
-
+    
 }
-
-.open #mobile-menu>li li {
+.open #mobile-menu>li li{
     opacity: 0.8;
 }
-
 /* hamburger 3 зураас */
-#hamburger .bars div {
+#hamburger .bars div{
     width: 2rem;
     background: var(--title-red-color);
     height: 0.1rem;
@@ -290,397 +249,282 @@ header .header-right nav>ul>li>a:hover::after {
     right: 0;
     transition: 0.4s;
 }
-
 /* hamburger 3 зураас дээр дарахад x тэмдэг болно */
 .open .bar1 {
     transform: rotate(-45deg) translate(-6px, 6px);
 }
-
+  
 .open .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .open .bar3 {
-    transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
-
 /* hamburger 3 зураас дээр дарахад x тэмдэг болно */
-
-
-/* home хэсгийн css (((((((((((((((((((((((((((((((*/
-/* home img хэсэг */
-
-.top-tour {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.section {
-    width: 80vw;
-    margin: auto;
-}
-
-.section .articles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
-}
-
-/* tour-ийн cards хурц ирмэг үүсгэхгүй */
-.section .articles article {
-    margin: 1rem;
-    border-radius: 3% 3% 3% 3%;
-    border-left: solid 1px rgba(0, 0, 0, 0.05);
-    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
-    border-right: solid 1px rgba(0, 0, 0, 0.05);
-}
-
-.section .articles article img {
-    width: 100%;
-    border-radius: 3% 3% 0 0;
-}
-
-.section .articles article a {
-    color: black;
-}
-
-/* tour cards hover effect */
-.section .articles article:hover {
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* section tours хэсэг framework)))) */
-
-/* footer хэсэг */
-footer {
+footer{
     margin-top: 5rem;
     text-align: center;
     background-color: var(--footer-bg-color);
     color: rgba(255, 255, 255, 0.75);
     padding: 2rem;
 }
-
-
-.page-title-height .page-title-name {
-    background: url("about.png") center center/cover no-repeat;
-    height: 90vh;
-    height: 40vh;
-    color: white;
+/* aboutus zurag */
+.about-zurag{
+    background: url("/PICTURES/about.webp") center center/cover no-repeat;
+    width: 100vw;
+    height: 50vh;
+}
+.article-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem auto;
+    gap: 1rem 2rem;
+    width: 80vw;
+}
+.article-grid article{
+    border: 2px var(--main-bg-color) solid;
     display: flex;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    height: auto;
+
+}
+.article-grid article h3{
+    margin-top: 2rem;
+}
+.article-grid article p{
+    margin: 2rem 1rem;
+    text-align: center;
+
+}
+.article-grid article a{
+    margin: 2rem 0;
+    padding: 0 2rem;
+    border-radius: 5%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.article-grid article a:hover{
+    background: var(--title-red-color);
+    color: white;
+}
+article .underline{
+    margin-top: 1rem;
+    background-color: #B4B1B1;
+    width: 10%;
+    height: 1px;
+}
+.certif{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    align-items: center;
+    gap: 3rem 0;
+}
+.certif .certif-img{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1rem;
+}
+.certif .certif-img img{
+    width: 100%;
+}
+.member{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 2rem auto;
+    align-items: center;
+}
+.member .member-img img{
+    width: 100%;
+}
+.req-add{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90vw;
+    margin: auto;
+    gap: 1rem 2rem;
+    height: auto;
+    justify-items: center;
+}
+.req-add section{
+    width: 100%;
+    display: flex;
     flex-direction: column;
 }
-
-.page-title-height .page-title-name h2 {
-    font-size: 3rem;
-    letter-spacing: 0.25rem;
+.req-add section form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
 }
-
-body {
-    font-family: 'Roboto Slab', serif;
-    line-height: 1.5rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------------------------------------*/
-.grid-cont {
-    display: grid;
-    width: 80%;
-    margin: auto;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    border: gray;
-    align-items: center;
-    border-radius: 2px;
-    gap: 2rem;
-}
-
-.a1 {
-    width: 430px;
-    height: 200px;
-    padding: 10px 10px 10px 10px;
-    background-color: #F0F0F0;
-    text-align: center;
-
-}
-
-.a2 {
-    width: 430px;
-    height: 200px;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    border: 1px;
-    border-style: solid;
-    border-color: gray;
-}
-
-@media (max-width: 1034px) {
-    .grid-cont {
-        grid-template-columns: repeat(1, 1fr);
-        margin: auto;
-        grid-template-areas:
-            "a1"
-            "a2"
-            "a1"
-            "a2"
-            "a1"
-            "a2";
-
-    }
-}
-
-/*------------------------------------------------*/
-.grid-form {
-    display: grid;
-    width: 90%;
-    margin: auto;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-@media (max-width: 1034px) {
-    .grid-item {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas:
-            "grid-item1"
-            "grid-item2";
-    }
-}
-
-/*------------------------------------------------*/
-
-
-
-
-
-
-
-.hr1 {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.button1 {
-    padding: 5px 50px 5px 50px;
-    margin-bottom: 15px;
-    border: none;
-    display: inline-block;
-    text-align: center;
-    box-shadow: 0 2px 4px darkslategray;
-    border-radius: 7px;
-    margin-top: 20px;
-}
-
-.button1:hover {
-    background-color: #FFFFFF;
-}
-
-.member {
-    text-align: center;
-    font-weight: bold;
-}
-
-.member1 {
-    max-width: 100%;
-    height: auto;
-}
-
-/* submit  */
-.tex1 {
-    text-align: center;
-    font-weight: bold;
-}
-
-.tex2 {
-    text-align: center;
-}
-
-input[type=text],
-select,
-textarea {
+input[type=text], select, textarea, input[type=email]{
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
+  }
+  
 input[type=submit] {
-    background-color: #1E90FF;
-    color: white;
-    padding: 12px 50px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    text-align: center;
+  background-color: black;
+  color: white;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
 
 }
 
 input[type=submit]:hover {
-    background-color: #00008B;
+  background-color:var(--title-red-color);
 }
-
-/* location oruulah */
-iframe {
-    height: 400px;
-    width: 550px;
-}
-
-.locat1 {
-    font-weight: bold;
-}
-
-.fo1 {
-    font-size: 9px;
-}
-
-.member2 {
-    padding: 20px 20px 20px 20px;
-    width: 300px;
+.address p{
+    font-size: 0.7rem;
 }
 
 
 
 @media (max-width: 1400px) {
-    .main {
-        grid-template-columns: repeat(1, 1fr);
+    .experiences{
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
     }
 }
-
 @media (max-width: 1150px) {
-    .section .articles {
-        grid-template-columns: repeat(1, 1fr);
+    .section .articles{
+        grid-template-columns: repeat(2, 1fr);
         /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
     }
 }
-
 @media (max-width: 1100px) {
-
     /* menu hamburger */
     header nav {
         display: none;
     }
-
-    #hamburger {
+    #hamburger{
         display: flex;
     }
-
-    #social {
+    #social{
         display: none;
     }
-
     header {
         padding: 0 3rem;
     }
-
     .container {
-        grid-template-areas:
-            "info info info"
-            "side side side"
-        ;
+        grid-template-areas: 
+        "info info info"
+        "side side side"
+        ;        
+    }
+    .container .side{
+        position: static;
     }
 
-    .overview ul {
+    .overview ul{
         margin-left: 5%;
         margin-right: 5%;
     }
 }
-
 @media (max-width: 910px) {
 
-    .main {
+    .experiences{
         grid-template-columns: repeat(1, 1fr);
     }
 }
-
 @media (max-width: 760px) {
-
     /* menu hamburger */
-    .section .articles {
+    .section .articles{
         grid-template-columns: repeat(1, 1fr);
         /* mobile дээр repeat 2, 1 болгох хэрэгтэй */
     }
 
-    .overview ul li {
+    #home .home-img div {
+        padding: 1rem;
+    }
+    #home .home-img div h2{
+        margin-bottom: 5rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        font-weight: 500;
+        /* mobile font */
+    }
+    #home .home-img div p{
+        font-size: 0.7rem;
+    }
+    .overview ul li{
         margin-left: 1rem;
         font-size: 0.8rem;
-    }
-
-    #choose {
+    }    
+    #choose{
         gap: 1rem;
     }
 }
-
 @media (max-width: 710px) {
     header {
         padding: 0 1rem;
     }
-
     .logo h1 {
         letter-spacing: 0.3rem;
         width: 13rem;
         font-size: 1rem;
     }
-
-    #main-title {
+    #main-title{
         font-size: 1.2rem;
     }
-
-    .logo img {
+    .logo img{
         width: 4rem;
-        height: 4.3rem;
+        height: auto;
     }
-
-    header {
+    header{
         height: 5rem;
     }
-
-    .open #mobile-menu {
+    .open #mobile-menu{
         top: 3.5rem;
     }
-
-    #hamburger {
+    #hamburger{
         top: 1.5rem;
     }
+    .page-title-height .page-title-name h2{
+        font-size: 2rem;
+        line-height: 2rem;
+        letter-spacing: 0.2rem;
+    }
+    .overview {
+        top: 5rem;
+    }
+    .container .info .tour-overview .item1{
+        grid-template-columns: repeat(1, 1fr);
+        /* mobile repeat */
+    }
+    .title-desc{
+        margin: 2rem 1rem;
+    }
+    .open #mobile-menu{
+        right: -1rem;
+    }
+    .article-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .req-add{
+        grid-template-columns: repeat(1, 1fr);
 
+    }
+
+    
 }
-
 @media (max-width: 580px) {
-
-    .text1 {
-        width: 25rem;
+        .overview ul{
+        margin: 0 2%;
     }
-
-    .container1 {
-        width: 20rem;
+    .overview ul li{
+        margin-left: 0.5rem;
+        font-size: 0.6rem;
+    }
+    .experiences .exp-overlay{
+        width: 20rem; 
         margin: 0 1rem 2rem 1rem;
-    }
-
-    .main {
-        grid-template-columns: 1fr;
     }
 }
