@@ -1,6 +1,6 @@
 console.log("start");
 class Tour {
-    constructor(ob){
+    constructor(ob) {
         this.tour_name = ob.tour_name;
         this.tour_img = ob.tour_img;
         this.tour_master = ob.tour_master;
@@ -8,7 +8,7 @@ class Tour {
 
     }
 
-    render(){
+    render() {
         return `<article>
         <a href="${this.tour_info_link}">
             <img src="${this.tour_img}" alt="tour image">
@@ -22,7 +22,7 @@ class Tour {
             </ul>
         </a>
     </article>`;
-                 
+
     }
 };
 
@@ -33,23 +33,24 @@ class TopTour {
 
     Download(targetElement) {
         fetch(`${this._tourUrl}/latest`)
-        .then( result => {
-            result.json().then(jsob => {
-                // filter
-                const filteredTour = jsob.record.filter(filter =>filter.top);
-                console.log(filteredTour);
-                gebi(targetElement).insertAdjacentHTML("afterbegin", filteredTour.map(map => {
+            .then(result => {
+                result.json().then(jsob => {
+                    // filter
+                    const filteredTour = jsob.record.filter(filter => filter.top);
+                    console.log(filteredTour);
+                    gebi(targetElement).insertAdjacentHTML("afterbegin", filteredTour.map(map => {
                         const _map = new Tour(map);
                         return _map.render();
                     }).reduce((p, c) => p + c, "")
-            );
+                    );
 
+                })
             })
-        })
-        .catch(error => {
-            console.log(error)
-        console.log("error catch")}
-            )  
+            .catch(error => {
+                console.log(error)
+                console.log("error catch")
+            }
+            )
 
     }
 
