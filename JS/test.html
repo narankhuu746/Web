@@ -138,10 +138,7 @@
                 let ren = new Tour(element);
                 ren_tours +=ren.render();
             })
-            tours.forEach(mama=>{
-                let ren= new Tour(element);
-                ren_tours +=ren.render();
-            })
+
             document.getElementById(title_Element).insertAdjacentHTML("afterbegin", ren_title);
             document.getElementById(tours_Element).insertAdjacentHTML("afterbegin", ren_tours);
         }
