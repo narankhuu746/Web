@@ -258,7 +258,7 @@ header .header-right nav>ul>li>a:hover::after{
 /* home хэсгийн css (((((((((((((((((((((((((((((((*/
 /* home img хэсэг */
 #home{
-    background: url("/PICTURES/home.webp") center center/cover no-repeat;
+    background: url("./PICTURES/home.webp") center center/cover no-repeat;
     height: 90vh;
 }
 #home .home-img{
